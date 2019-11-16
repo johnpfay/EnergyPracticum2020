@@ -10,6 +10,7 @@ Author: John Fay
 
 * Course synopsis: 
   * To take a central question and answer it using geospatial analysis. 
+  * En route, learn about geospatial analysis and associated technologies.
 * Course themes: Workflows
   * Discuss the central question to a point of common understanding. 
   * Translating the question into a set of actionable objectives  
