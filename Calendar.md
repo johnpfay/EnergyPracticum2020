@@ -1,21 +1,21 @@
 # Calendar
 
-| Week | Date   | Topic                                                       | Assignment                                    |
-| ---- | ------ | ----------------------------------------------------------- | --------------------------------------------- |
-| 1    | Jan 9  | Course Overview; Class Setup                                | Project contemplation                         |
-| 2    | Jan 16 | Tim Johnson: Q&A                                            | Summarize Tim's talk                          |
-| 3    | Jan 23 | Discussion: Revisit question; devise actionable tasks       | ArcGIS Online Tutorial; Read on Agile project |
-| 4    | Jan 30 | Discussion: ArcGIS Online                                   | Find data; get into AGOL                      |
-| 5    | Feb 6  | Discussion: Spatial Data types                              | MJ Bradley tool                               |
-| 6    | Feb 13 | Discussion: Cast project question as spatial analysis tasks | Outline project goals                         |
-| 7    | Feb 20 |                                                             |                                               |
-| 8    | Feb 27 |                                                             |                                               |
-| 9    | Mar 5  |                                                             |                                               |
-|      |        |                                                             |                                               |
-| 10   | Mar 19 |                                                             |                                               |
-| 11   | Mar 26 |                                                             |                                               |
-| 12   | Apr 2  |                                                             |                                               |
-| 13   | Apr 9  |                                                             |                                               |
+| Week |  Date   | Topic                                                       | Assignment               |
+| :--: | :-----: | ----------------------------------------------------------- | ------------------------ |
+|  1   |  Jan 9  | Course Overview; Class Setup                                | Project contemplation    |
+|  2   | Jan 16  | Tim Johnson: Q&A                                            | Summarize Tim's talk     |
+|  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks       | ArcGIS Online Tutorial   |
+|  4   | Jan 30  | Discussion: ArcGIS Online                                   | Find data; get into AGOL |
+|  5   |  Feb 6  | Discussion: Spatial Data types                              |                          |
+|  6   | Feb 13  | Workshop: Network analysis                                  | MJ Bradley tool          |
+|  7   | Feb 20  | Discussion: Cast project question as spatial analysis tasks | Outline project goals    |
+|  8   | Feb 27  | TBD                                                         |                          |
+|  9   |  Mar 5  | TBD                                                         |                          |
+| *10* | *Mar 7* | *No Class - Spring break*                                   |                          |
+|  11  | Mar 19  | TBD                                                         |                          |
+|  12  | Mar 26  | TBD                                                         |                          |
+| *13* | *Apr 2* | *No Class - MP Symposium*                                   |                          |
+|  14  |  Apr 9  | Presentations                                               |                          |
 
 ## Assignments
 
