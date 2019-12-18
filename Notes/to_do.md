@@ -45,22 +45,30 @@
   * Discuss how you might present results
   * *Don't worry about being wrong...*
 
+- [ ] Task 4: Read MJB&A project documentation
+
+  * Generate prompts
+  * What spatial analyses are involved?
+
+- [ ] Task 5: Reflect on MJB&A project
+
+  * Generate prompts
+  * What spatial analyses are involved?
+
 - [ ] ArcGIS Online Tutorial 
 
   * Explore tutorials [[link](https://doc.arcgis.com/en/arcgis-online/get-started/online-quick-exercises.htm)]
   * Create exercises
 
-- [ ] Exercise: Spatial data types
+- [ ] Exercise: Vector data 
 
   * Vector components: {point/line/polygon + attributes + projection}
   * Vector formats
+
+- [ ] Exercise: Raster data
+
   * Raster components: {pixel matrix + attributes + affine transformation}
   * Raster formats
-
-- [ ] Exercise: Spatial analyses
-
-  * Vector analyses
-  * Raster analyses
 
 - [ ] Exercise: Network analysis
 
