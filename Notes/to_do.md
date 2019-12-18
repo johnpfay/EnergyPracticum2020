@@ -26,7 +26,7 @@
   * Communicate objectives with Tim
   * Student expectations
 
-- [ ] Task 2: Summarize Tim's talk
+- [x] Task 2: Summarize Tim's talk
 
   * Prompts for summarizing talk
 
