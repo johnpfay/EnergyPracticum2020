@@ -24,6 +24,8 @@
 
   * Objectives of chat
   * Communicate objectives with Tim
+    * What factors are important to consider?
+    * How might we find out more? 
   * Student expectations
 
 - [x] Task 2: Summarize Tim's talk
