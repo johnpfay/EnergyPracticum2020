@@ -1,5 +1,5 @@
 ---
-Title: Calendar
+Title: GIS Practicum 2020
 Class: ENV 790 - GIS Practicum (Energy)
 Author: John Fay
 Date: Spring 2020
