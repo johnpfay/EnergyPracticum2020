@@ -1,5 +1,10 @@
 # To Do
 
+- [ ] Class site: 
+
+  * Sakai/GitHub
+  * Overview page
+  
 - [x] Blurb: Course overview 
 
   * What is a practicum/Central task
