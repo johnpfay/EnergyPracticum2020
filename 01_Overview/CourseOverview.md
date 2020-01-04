@@ -1,19 +1,21 @@
-```yaml
+---
 Title: Course Overview
 Class: ENV 790 - GIS Practicum (Energy)
 Author: John Fay
 Date: Spring 2020
-```
+---
 
 # Course Overview
 
+[toc]
 
+---
 
 ## Central task
 
-#### "Design an optimal plugin electric vehicle (PEV) charging network for North Carolina"
+#### "Design an optimal plugin electric vehicle (PEV) charging network for North Carolina..."
 
-
+---
 
 ## Course objectives
 
@@ -24,7 +26,7 @@ This GIS practicum teaches GIS/geospatial analysis from a project-based perspect
 * Compile and present results and 
 * Assess how successful we were at meeting our initial objectives and discuss ways to improve the overall analysis
 
-
+---
 
 ## Learning objectives
 
@@ -46,7 +48,7 @@ Over the course of this practicum we will explore the various topics, gaining at
   * Spatial analysis in R
   * Versioning and GitHub
 
-
+---
 
 ## Course expectations and assessment
 
@@ -82,7 +84,5 @@ We will meet once a week, Thursdays from 3:05 to 4:20pm, in LSRC A153. Classes w
 
 * Constructive comments supporting and criticizing how the class was run.
 
-  
 
-
-
+## 
