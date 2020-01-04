@@ -9,7 +9,7 @@ Date: Spring 2020
 
 # Class Setup
 
-
+---
 
 ### 1. Creating your ArcGIS Online account
 
