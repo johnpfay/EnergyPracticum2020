@@ -60,3 +60,13 @@ Author: John Fay
 * Create a virtual machine
   * Installs...
 
+## Course grading
+
+* Class participation
+* Class preparedness
+* Topic presentation
+
+| Item  | Score | % of total grade |
+| ----- | ----- | ---------------- |
+| Class |       |                  |
+
