@@ -9,6 +9,10 @@ Date: Spring 2020
 
 # Class Setup
 
+We will use a number of new technologies throughout this course. These include **ArcGIS Online** ("AGOL") and **ArcGIS Pro** both of which require you to activate your AGOL account, as directed below. We will also likely use Virtual Machines hosted by Duke and mapped class drives. 
+
+Follow the directions below to enable these technologies. If you have 
+
 ---
 
 ### 1. Creating your ArcGIS Online account
@@ -57,7 +61,7 @@ Date: Spring 2020
 
 
 
-### 5. Mapping your class drives to your virtual machine
+### 5. Mapping your class drives to your virtual machine (or any NSOE desktop)
 
 * Create a new text file on your desktop.
 * Rename it to `login.bat`. Windows should ask you to confirm you are changing the file type. If not, you'll need to alter your Windows setting so that extensions of known files are shown... - see [this link](https://www.techadvisor.co.uk/how-to/windows/windows-10-file-extensions-3697651/).
