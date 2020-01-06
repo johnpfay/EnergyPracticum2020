@@ -21,7 +21,7 @@
   * Sign in to ArcGIS Pro
   * Mapping class drives
 
-- [ ] Task 1: Project contemplation
+- [x] Task 1: Project contemplation
 
   * [Research journal](https://bassconnections.duke.edu/sites/bassconnections.duke.edu/files/site-images/Reflection%20guidance%20for%20team%20leaders_2019.pdf) structure
   * 1st entry: "Project contemplation"
