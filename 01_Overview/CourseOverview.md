@@ -62,13 +62,14 @@ We will meet once a week, Thursdays from 3:05 to 4:20pm, in LSRC A153. Classes w
 
 #### ♦ Research journal (25%)
 
-* Compile thoughts on various assigned "prompts" in a single document.
+* Compile thoughts on various assigned "prompts" in a single document, blog, or other format.
 * Write concisely and keep on topic, but do not worry about being "wrong".
+* *See below for more information...*
 
 #### ♦ GIS exercises (25%)
 
 * Complete the assigned exercises in a timely fashion.
-* Correct answers to challenges posed.
+* Submit answers to challenges posed.
 
 #### ♦ Submitting and presenting final project report (35%)
 
@@ -78,11 +79,35 @@ We will meet once a week, Thursdays from 3:05 to 4:20pm, in LSRC A153. Classes w
 * Answers the central question clearly and convincingly
 * Includes discussion on the overall analysis and thoughts on further improvement
 
-#### ♦ Peer evaluation & Course evaluation (5%)
+#### ♦ Peer evaluation & Course feedback(5%)
 
 * Constructive comments supporting and criticizing others' work.
 
 * Constructive comments supporting and criticizing how the class was run.
 
+---
 
-## 
+## Your Research Journal
+
+One requirement of this course is to maintain a <u>research journal</u>. This journal provides an opportunity to: 
+
+* practice communicating your experiences, ideas, questions and goals in writing 
+* describe and examine the trajectory of your research
+* synthesize what and how you are learning
+* consider your individual contribution to a team and how the team is functioning as a whole
+* ask questions about the research process
+* examine what you do well and enjoy about the research process and where you might improve
+* articulate a path forward towards future research goals
+
+Throughout the semester, I will provide a number of topics for journal entries. These serve to prompt your thought process and don't have any right or wrong answers. You are encouraged to be frank and candid in your entries. Revealing uncertainty, naivety, or ignorance on a certain topic is actually a <u>good</u> thing here, especially when followed up with thoughtful discussion on how to proceed from there. 
+
+By the end of the course, your journal should enable you to reflect on the entire evolution of the project as well as store useful notes on specific GIS operations that may be helpful in subsequent spatial analysis projects. You will submit your journal at the end of the course. At this stage, your journal should reflect the arc of your learning throughout this class. While it's primary purpose is to serve as a resource for "your future self", it should be clearly enough organized such that others (like me) can follow your learning process throughout the semester. More specifically, your journal should emphasize the following: 
+
+* *Clarity*: You clearly express complex ideas and provides illustrative examples. Writing is concise and to the point.
+* *Logic*: You follow an argument or line of reasoning to conclusion, identifying areas for further inquiry and reasonable routes towards your research goals.
+* *Depth*: You articulate the complexity of a research question or problem and make relevant connections.
+* *Perspective*: You examine a problem from multiple points of view and assimilate perspectives/experiences from outside this course to bear on the central question.
+* *Significance*: You draw conclusions and articulate the significance of your findings.
+
+We will discuss in class the best **format** of this journal (Word Document? Sakai Blog? Wordpress? Weebly? Wix?),  and you have flexibility in which format you decide works best for you. Again, you should not be concerned with looking naïve or ignorant in your journals; being correct is not an objective. Rather it should more reflect the process of problem identification, problem solving and the skills you picked up along the way. 
+

@@ -4,6 +4,7 @@
 
   * Sakai/GitHub
   * Overview page
+  * AGOL invites
   
 - [x] Blurb: Course overview 
 
