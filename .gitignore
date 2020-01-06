@@ -1,2 +1,5 @@
-sandbox/Data/*
+Sandbox/Data/*
 Sandbox/NRELkey.txt
+Sandbox/.ipynb_checkpoints/*
+
+admin/scripts/.ipynb_checkpoints
