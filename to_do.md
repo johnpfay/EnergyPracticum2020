@@ -1,10 +1,10 @@
 # To Do
 
-- [ ] Class site: 
+- [x] Class site: 
 
   * Sakai/GitHub
   * Overview page
-  * AGOL invites
+  * ~~AGOL invites~~
   
 - [x] Blurb: Course overview 
 
