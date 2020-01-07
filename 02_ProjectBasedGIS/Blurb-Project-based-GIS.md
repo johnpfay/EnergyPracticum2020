@@ -9,11 +9,9 @@ Date: Spring 2020
 
 ## Introduction
 
-One time I was asked to map priority areas in central North Carolina for conservation. I was a GIS expert, so it should be easy for me to map that with the help of my expensive software. 
+Many often think of GIS as the solution to a problem when really it's just a tool that may help you find the solution. Often overlooked is the need to redefine or restate a project objective into something we can train a computer to process, something I call "making the project actionable". This usually means identifying any vague terms in an initial project question and assigning a specific value to it. For example, someone may ask you to count "all fast food restaurants near an interstate". That may sound easy at first, but to tackle this, we'd need to know what "near" is. 500 meters? 3 miles? That number may change our count quite significantly. This section on "Project Based GIS" discusses that and other aspects we need to address in order to tap into the power that computers and GIS can offer. 
 
-Many often think of GIS as the solution to a problem when really it's just a tool that may help you find the solution. Often overlooked is the need to redefine or restate a project objective into something we can train a computer to process, something I call "making the project actionable". This usually means identifying any vague terms in an initial project question and 
-
-Fun flick: https://www.youtube.com/watch?v=BKorP55Aqvg
+> Fun flick: https://www.youtube.com/watch?v=BKorP55Aqvg
 
 
 
@@ -27,7 +25,9 @@ Fun flick: https://www.youtube.com/watch?v=BKorP55Aqvg
 
 ---
 
-## 1. Define problem
+## Steps in executing a spatial analysis project
+
+### 1. Define problem
 
 * Main objective: what is your central question?
 * Sub-objectives: what would answer your central question?
@@ -35,22 +35,28 @@ Fun flick: https://www.youtube.com/watch?v=BKorP55Aqvg
 * Deliverables: how will you communicate your results?
 * Assessment: how will you know if you succeeded or failed?
 
-## 2. Plan of attack
+### 2. Plan of attack
 
 * Analytical workflows
 * Data needs & sources
 
-## 3. Attack/Analysis
+### 3. Attack/Analysis
 
 * Workspace organization
 * Sprints and adjustments
 
-## 4. Synthesis
+### 4. Synthesis
 
 * Write up results
 * Interpret and discuss in terms of central question
 
-## 5. Post mortem
+### 5. Post mortem
 
 * Important lessons learned from hindsight
 * Share your results, your analysis, your knowledge with others
+
+---
+
+
+
+## Task 
