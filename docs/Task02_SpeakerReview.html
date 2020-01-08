@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>GIS Practicum 2020</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>Task02_SpeakerReview</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -151,6 +151,79 @@ svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
 
 
 :root {
@@ -675,12 +748,6 @@ footer {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h4>
-    <center> 
-    ENV 790.55 - GIS Practicum (Energy) | 
-    Spring 2020 | 
-    Instructor:     <a href="mailto:john.fay@duke.edu">John Fay</a>
-    </center>
-</h4><hr /><figure><table><thead><tr><th style='text-align:center;' ><span>Week</span></th><th style='text-align:center;' ><span>Date</span></th><th><span>Topic</span></th><th><span>Assignment</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>1</span></td><td style='text-align:center;' ><span>Jan 9</span></td><td><a href='./CourseOverview.html'><span>Course Overview</span></a><span>; Introductions; </span><a href='./ClassSetup.html'><span>Class set-up</span></a></td><td><span>Class Set-up &amp; </span><a href='./Task01_ProjectContemplation.html'><span>Project contemplation</span></a></td></tr><tr><td style='text-align:center;' ><span>2</span></td><td style='text-align:center;' ><span>Jan 16</span></td><td><span>Guest: Tim Johnson</span></td><td><a href='./Task02_SpeakerReview.html'><span>Summarize Tim&#39;s talk</span></a></td></tr><tr><td style='text-align:center;' ><span>3</span></td><td style='text-align:center;' ><span>Jan 23</span></td><td><span>Discussion: Revisit question; devise actionable tasks</span><br><span>Project based GIS</span></td><td><span>Initial project proposal</span></td></tr><tr><td style='text-align:center;' ><span>4</span></td><td style='text-align:center;' ><span>Jan 30</span></td><td><span>Discussion: Sharing project ideas</span></td><td><span>Read MJB&amp;A</span></td></tr><tr><td style='text-align:center;' ><span>5</span></td><td style='text-align:center;' ><span>Feb 6</span></td><td><span>Guest: MJ Bradley &amp; Associates</span></td><td><span>Summarize Talk</span></td></tr><tr><td style='text-align:center;' ><span>6</span></td><td style='text-align:center;' ><span>Feb 13</span></td><td><span>Workshop: ArcGIS Online</span></td><td><span>AGOL Tutorial</span></td></tr><tr><td style='text-align:center;' ><span>7</span></td><td style='text-align:center;' ><span>Feb 20</span></td><td><span>Workshop: Spatial Data types</span></td><td><span>Vector data exercise</span></td></tr><tr><td style='text-align:center;' ><span>8</span></td><td style='text-align:center;' ><span>Feb 27</span></td><td><span>Workshop: Spatial analyses</span></td><td><span>Raster data exercise</span></td></tr><tr><td style='text-align:center;' ><span>9</span></td><td style='text-align:center;' ><span>Mar 5</span></td><td><span>Workshop: Network analysis</span></td><td><span>Network analysis exercise</span></td></tr><tr><td style='text-align:center;' ><em><span>10</span></em></td><td style='text-align:center;' ><em><span>Mar 7</span></em></td><td><em><span>No Class - Spring break</span></em></td><td><span>Outline project goals</span></td></tr><tr><td style='text-align:center;' ><span>11</span></td><td style='text-align:center;' ><span>Mar 19</span></td><td><span>Project updates</span></td><td><span>Project work</span></td></tr><tr><td style='text-align:center;' ><span>12</span></td><td style='text-align:center;' ><span>Mar 26</span></td><td><span>Project updates</span></td><td><span>Project work</span></td></tr><tr><td style='text-align:center;' ><em><span>13</span></em></td><td style='text-align:center;' ><em><span>Apr 2</span></em></td><td><em><span>No Class - MP Symposium</span></em></td><td><span>Project work</span></td></tr><tr><td style='text-align:center;' ><span>14</span></td><td style='text-align:center;' ><span>Apr 9</span></td><td><span>Presentations</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p></div>
+<div  id='write'  class = 'is-node'><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">Title</span><span class="cm-meta">: </span>Speaker Review - Tim Johnson</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">Class</span><span class="cm-meta">: </span>ENV 790 - GIS Practicum (Energy)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">Author</span><span class="cm-meta">: </span>John Fay</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">Date</span><span class="cm-meta">: </span>Spring 2020</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 80px;"></div><div class="CodeMirror-gutters" style="display: none; height: 80px;"></div></div></div></pre><h1><a name="speaker-review-tim-johnson" class="md-header-anchor"></a><span>Speaker Review: Tim Johnson</span></h1><p><span>Write in your research journal thoughts and observations from Tim&#39;s talk to our class. Be prepared to discuss these in our next class. </span></p><p><span>Some questions you may find useful:</span></p><ul><li><h4><a name="what-were-some-key-points-tim-covered" class="md-header-anchor"></a><span>What were some key points Tim covered?</span></h4></li><li><h4><a name="did-anything-tim-say-stir-ideas-on-how-we-might-approach-the-task-of-siting-pev-chargers-if-so-what-was-it-and-how-did-it-alter-your-thinking" class="md-header-anchor"></a><span>Did anything Tim say stir ideas on how we might approach the task of siting PEV chargers? If so, what was it and how did it alter your thinking? </span></h4></li><li><h4><a name="are-there-key-areas-that-remain-unanswered-regarding-how-we-might-go-about-siting-pev-chargers" class="md-header-anchor"></a><span>Are there key areas that remain unanswered regarding how we might go about siting PEV chargers? </span></h4></li><li><h4><a name="do-you-have-any-follow-up-questions-youd-like-to-ask-tim" class="md-header-anchor"></a><span>Do you have any follow-up questions you&#39;d like to ask Tim?</span></h4></li><li><h4><a name="based-on-tims-chat-what-do-you-think-the-next-step-in-our-analysis-might-be" class="md-header-anchor"></a><span>Based on Tim&#39;s chat, what do you think the next step in our analysis might be? </span></h4><ul><li><span>Is the central question specific enough to answer? What else might we need to know to provide a specific answer to this question? Do we need more specifics? Where might we get those specifics? </span></li><li><span>What data is missing and how might we find those data? </span></li><li><span>What analyses might be involved? Of these which are spatial analyses? </span></li></ul></li></ul><p>&nbsp;</p></div>
 </body>
 </html>
