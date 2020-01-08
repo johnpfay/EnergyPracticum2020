@@ -18,7 +18,7 @@ Date: Spring 2020
 | Week |  Date   | Topic                                                        | Assignment                                                   |
 | :--: | :-----: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |  1   |  Jan 9  | [Course Overview](./CourseOverview.html); Introductions; [Class set-up](./ClassSetup.html) | Class Set-up & [Project contemplation](./Task01_ProjectContemplation.html) |
-|  2   | Jan 16  | Guest: Tim Johnson                                           | Summarize Tim's talk                                         |
+|  2   | Jan 16  | Guest: Tim Johnson                                           | [Summarize Tim's talk](./Task02_SpeakerReview.html)          |
 |  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks        | Initial project proposal                                     |
 |  4   | Jan 30  | Discussion: Sharing project ideas                            | Read MJB&A                                                   |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates                               | Summarize Talk                                               |
