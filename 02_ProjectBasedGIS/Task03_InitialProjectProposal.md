@@ -1,9 +1,9 @@
-```yaml
+---
 Title: Initial Project Proposal
 Class: ENV 790 - GIS Practicum (Energy)
 Author: John Fay
 Date: Spring 2020
-```
+---
 
 # Initial Project Proposal
 
