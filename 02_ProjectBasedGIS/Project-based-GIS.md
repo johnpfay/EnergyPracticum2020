@@ -1,9 +1,9 @@
-```yaml
+---
 Title: Project Based GIS
 Class: ENV 790 - GIS Practicum (Energy)
 Author: John Fay
 Date: Spring 2020
-```
+---
 
 # Project Based GIS
 
@@ -11,7 +11,7 @@ Date: Spring 2020
 
 ## Introduction
 
-> Fun flick revealing potential challenges in being the "technical expert": https://www.youtube.com/watch?v=BKorP55Aqvg
+> Fun flick revealing challenges in being the "technical expert": https://www.youtube.com/watch?v=BKorP55Aqvg
 
 Many often think of GIS as the solution to a problem when really it's just a tool that may help you find the solution. And like any tool, it's just one piece in a larger process aimed at getting something done. In this section on "Project Based GIS", we examine GIS in the context of this larger framework, one that includes envisioning exactly how GIS may be used, on what data, and what the results should look like. Understanding GIS from this perspective should allow you to use it more efficiently and avoid wasted time and resources, and allow you to benefit from your hard work even if your results aren't exactly what you had hoped for. 
 
