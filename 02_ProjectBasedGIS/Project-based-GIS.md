@@ -68,7 +68,7 @@ Many often think of GIS as the solution to a problem when really it's just a too
 
 * Analytical workflows
 * Literature review; expert consultation
-* Data needs & sources
+* Data needs & sources; identifying proxy data when exact data is unlikely to exist
 
 ### 3. Attack/Analysis
 
