@@ -7,11 +7,13 @@ Date: Spring 2020
 
 # Project Based GIS
 
+> Fun flick revealing potential challenges in being the "technical expert": https://www.youtube.com/watch?v=BKorP55Aqvg
+
 ## Introduction
 
-Many often think of GIS as the solution to a problem when really it's just a tool that may help you find the solution. Often overlooked is the need to redefine or restate a project objective into something we can train a computer to process, something I call "making the project actionable". This usually means identifying any vague terms in an initial project question and assigning a specific value to it. For example, someone may ask you to count "all fast food restaurants near an interstate". That may sound easy at first, but to tackle this, we'd need to know what "near" is. 500 meters? 3 miles? That number may change our count quite significantly. This section on "Project Based GIS" discusses that and other aspects we need to address in order to tap into the power that computers and GIS can offer. 
+Many often think of GIS as the solution to a problem when really it's just a tool that may help you find the solution. Often overlooked is the need to redefine or restate a project objective into something a computer can actually process, something I call "making the project actionable". This often includes identifying all vague terms in an initial project question and figuring a way to  assign a specific value to it. For example, suppose you were asked to count "all fast food restaurants near Interstate 40". That may sound straightforward enough at first. However, you can't really answer this without knowing what "near" is. 500 meters? 3 miles? The choice may alter our result quite significantly -- or it may not...
 
-> Fun flick: https://www.youtube.com/watch?v=BKorP55Aqvg
+This section on "Project Based GIS" addresses this and other issues that need to be resolved before moving forward on a geospatial project. Here, we examine GIS less as a technical tool and more as a piece in a larger workflow (the technical part will come later). We review a framework that enables us to move efficiently towards a specified objective and how best to leverage the power of GIS along the way. 
 
 
 
@@ -25,7 +27,7 @@ Many often think of GIS as the solution to a problem when really it's just a too
 
 ---
 
-## Steps in executing a spatial analysis project
+## Discussion: Steps in executing a spatial analysis project
 
 ### 1. Define problem
 
