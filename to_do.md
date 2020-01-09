@@ -26,7 +26,7 @@
   * [Research journal](https://bassconnections.duke.edu/sites/bassconnections.duke.edu/files/site-images/Reflection%20guidance%20for%20team%20leaders_2019.pdf) structure
   * 1st entry: "Project contemplation"
 
-- [ ] Blurb: Guidelines for chat with Tim
+- [x] Blurb: Guidelines for chat with Tim
 
   * Objectives of chat
   * Communicate objectives with Tim
@@ -38,7 +38,7 @@
 
   * Prompts for summarizing talk
 
-- [ ] Blurb: Project-based GIS 
+- [x] Blurb: Project-based GIS 
 
   * Define problem
   * Plan of attack
@@ -46,7 +46,7 @@
   * Synthesis
   * Post-mortem
 
-- [ ] Task 3: Initial project proposal
+- [x] Task 3: Initial project proposal
 
   * State main objective
   * State at least 3 actionable objectives
@@ -86,3 +86,4 @@
   
 
   
+
