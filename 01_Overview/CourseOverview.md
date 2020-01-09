@@ -5,6 +5,8 @@ Author: John Fay
 Date: Spring 2020
 ---
 
+[ENV 790 - GIS Practicum (Energy)](./index.html)
+
 # Course Overview
 
 [toc]
@@ -15,6 +17,8 @@ Date: Spring 2020
 
 #### "Design an optimal plugin electric vehicle (PEV) charging network for North Carolina..."
 
+
+
 ---
 
 ## Course objectives
@@ -23,8 +27,10 @@ This GIS practicum teaches GIS/geospatial analysis from a project-based perspect
 
 * Discuss approaches and best practices for using GIS in a project setting
 * Examine and execute various geospatial analyses that may be useful in tackling the central task
-* Compile and present results and 
+* Compile and present results
 * Assess how successful we were at meeting our initial objectives and discuss ways to improve the overall analysis
+
+
 
 ---
 
@@ -48,6 +54,8 @@ Over the course of this practicum we will explore the various topics, gaining at
   * Spatial analysis in R
   * Versioning and GitHub
 
+
+
 ---
 
 ## Course expectations and assessment
@@ -56,7 +64,7 @@ We will meet once a week, Thursdays from 3:05 to 4:20pm, in LSRC A153. Classes w
 
 #### ♦ Attendance and active participation in class sessions (10%)
 
-* Arrive to class promptly and come prepared for the day's activities
+* Arrive to class on-time and come prepared for the day's activities
 * Engage in class discussions and workshops
 * Be courteous to others and encourage discussion 
 
@@ -82,8 +90,9 @@ We will meet once a week, Thursdays from 3:05 to 4:20pm, in LSRC A153. Classes w
 #### ♦ Peer evaluation & Course feedback(5%)
 
 * Constructive comments supporting and criticizing others' work.
-
 * Constructive comments supporting and criticizing how the class was run.
+
+
 
 ---
 

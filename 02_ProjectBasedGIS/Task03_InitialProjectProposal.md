@@ -5,6 +5,8 @@ Author: John Fay
 Date: Spring 2020
 ---
 
+[ENV 790 - GIS Practicum (Energy)](./index.html)
+
 # Initial Project Proposal
 
 So far, we've given some thought to our central question of how to design a passenger electric vehicle charging network across North Carolina. Next we want to organize our thoughts into a coherent **project proposal**. 
