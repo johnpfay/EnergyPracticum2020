@@ -22,25 +22,33 @@ https://mjb-a.maps.arcgis.com/apps/webappviewer/index.html?id=06a73cb31d014f4f82
 
 # Sequence
 
-## 1. Course overview
+1. ### Intro
 
-* Class setup
-* Energy Analysis w/Tim Johnson
-* Approaching a GIS task
+2. ### Think about question: what is important?
 
-## 2. Intro to GIS: 
+   * Study the problem: consult client/experts, literature review
 
-* A. ArcGIS Online
-* B. Spatial data models: Vector & Raster
-* C. Network analyses
+3. ### Focus into an actionable project
 
----
+   * Clarify objectives 
+   * Identify subtasks - construction plan
 
-### Project management
+4. ### Gather intel about the central question
 
-* https://vimeo.com/89752485
-* Foster diverse perspectives; aggregate thought converges on truth
-* Accept the fact that nobody knows everything about a project; each contributes a unique piece
-* "Cognitive diversity" - shake things up; don't rely on/agree with highest status person
-* 
+   * Revise project scope
+   * Identify useful geospatial analyses
+
+5. ### Learn how to execute geospatial analyses
+
+   * Platforms (Online vs Desktop)
+   * Data models (vector, raster, and other)
+   * Vector analyses
+   * Raster analyses
+
+6. ### Project work
+
+   * Find and organize data
+   * Execute analysis
+   * Synthesize and communicate results
+   * Evaluate success and revise analysis
 
