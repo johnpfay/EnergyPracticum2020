@@ -11,7 +11,7 @@ Date: Spring 2020
 
 ---
 
-Your first assigned task for the class is to contemplate the practicum's central question of siting electric vehicle chargers across North Carolina. Some of you may have already given this significant though, but most of you haven't really thought about this much at all. 
+Your first assigned task for the class is to contemplate the practicum's central question of siting electric vehicle chargers across North Carolina. Some of you may have already given this significant thought, but most of you haven't really thought about this much at all. 
 
 Below are a few prompts to get you thinking about this question. Spend some time thinking about these and jot down your thoughts in your **research journal** (this will be your first entry). <u>Come to the next class prepared to discuss these questions and any other related thoughts/questions/ideas you have</u>.
 
