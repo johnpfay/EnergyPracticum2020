@@ -53,3 +53,12 @@ https://datacarpentry.org/organization-geospatial/
 ### Intro to Raster Data in Python
 
 https://geohackweek.github.io/raster/
+
+
+
+---
+
+## DATA
+
+Scraping data and mapping it
+
