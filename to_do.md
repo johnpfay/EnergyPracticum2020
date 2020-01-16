@@ -57,10 +57,12 @@
 
   * Generate prompts
   * What spatial analyses are involved?
+  * Inform Grace of 
 
 - [ ] Task 5: Reflect on MJB&A project
 
   * Generate prompts
+  * Anything new learned?
   * What spatial analyses are involved?
 
 - [ ] ArcGIS Online Tutorial 
