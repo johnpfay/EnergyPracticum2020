@@ -80,10 +80,6 @@ https://datacarpentry.org/organization-geospatial/
 
 ### Intro to Vector data
 
-
-
-
-
 ---
 
 ## DATA
@@ -101,7 +97,19 @@ https://datacarpentry.org/organization-geospatial/
 
 ---
 
-opportunities
 
-restrictions
 
+## 1. ArcGIS Online
+
+### Objectives:
+
+* Understand what AGOL is: GIS platform | Content Manager | Web host
+* Data types
+* Visualizing data
+* Analyzing data
+
+### Exercises:
+
+* Create your AGOL account
+* Make a map! 
+* Finding data
