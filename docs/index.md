@@ -18,7 +18,7 @@ Date: Spring 2020
 | Week |  Date   | Topic                                                        | Assignment                                                   |
 | :--: | :-----: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |  1   |  Jan 9  | [Introductions](./CourseIntroduction.html);[Course Overview](./CourseOverview.html);[Class set-up](./ClassSetup.html) | Class Set-up & [Project contemplation](./Task01_ProjectContemplation.html) |
-|  2   | Jan 16  | Guest: Tim Johnson                                           | [Summarize Tim's talk](./Task02_SpeakerReview.html)          |
+|  2   | Jan 16  | Guest: Tim Johnson ([slide deck](./Materials/TimJohnson_13Jan2020.pdf)) | [Summarize Tim's talk](./Task02_SpeakerReview.html)          |
 |  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks<br />Tutorial: [Project based GIS](./Project-based-GIS.html) | [Initial project proposal](./Task03_InitialProjectProposal.html) |
 |  4   | Jan 30  | Discussion: Sharing project ideas                            | Read MJB&A documents                                         |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates                               | Summarize Talk                                               |
