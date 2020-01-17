@@ -1,0 +1,51 @@
+- Census.gov shapefiles: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+- EIA electricity gridline info: https://www.eia.gov/maps/layer_info-m.php or https://usngcenter.org/portfolio-item/usng-gis-data/
+- Land cover and land use info: [http://www.arcgis.com/home/search.html?q=%22Land%20Use%20And%20Land%20Cover%20LULC%22](http://www.arcgis.com/home/search.html?q="Land Use And Land Cover LULC")
+- Durham City-County Electric Vehicle and Charging Station Plan: https://durhamnc.gov/DocumentCenter/View/950/Electric-Vehicle-and-Charging-Station-Plan-PDF
+- Technical & Design Guidelines For EV Charging Infrastructure — #CleanTechnica Report: https://cleantechnica.com/2019/02/16/technical-design-guidelines-for-ev-charging-infrastructure-cleantechnica-report/
+- EV Charging Station Installation Guidebook: https://www.driveelectricvt.com/Media/Default/docs/electric-vehicle-charging-station-guidebook.pdf 
+-  Site Selection Guide for EV Charging Stations: [http://www.gflrpc.org/uploads/5/0/4/0/50406319/ev_site_checklist_v0301.pdf](http://www.gflrpc.org/uploads/5/0/4/0/50406319/ev_site_checklist_v03-01.pdf)
+-  State electric vehicle incentives: https://afdc.energy.gov/laws/state_summary?state=NC
+-  EV Market share and growth potential:https://evadoption.com/ev-market-share/ev-market-share-state/
+- Report by sustainable travel strategies on the siting of EV charging stations (2012): http://vacleancities.org/wp-content/uploads/Siting-EV-Charging-Stations-FINAL-12.pdf
+- North Carolina ZEV plan: https://www.ncdot.gov/initiatives-policies/environmental/climate-change/Documents/nc-zev-plan.pdf
+- Siting public electric vehicle charging stations in Beijing using big-data informed travel patterns of the taxi fleet (2014): https://doi.org/10.1016/j.trd.2014.09.003
+- Optimal fast charging station placing and sizing - https://www.sciencedirect.com/science/article/pii/S0306261914003171
+- Charging infrastructure planning for promoting battery electric vehicles: An activity-based approach using multiday travel data https://www.sciencedirect.com/science/article/pii/S0968090X13002283 -
+- Electric Vehicle Charging Station Placement: Formulation, Complexity, and Solutions - https://ieeexplore.ieee.org/abstract/document/6879337
+- NY EV Charging Station Implementation Doc 
+  - This report talks about potential barriers to adoption, which I think we  need to consider in order to have a comprehensive picture of the  existing infrastructure we’re entering in
+  - It also offers recommended locations and shows how they ranked locations by the greatest need of EV chargers
+- Seems like a guy named Todd Wilson developer a location analysis mapping system to identify all the existing chargers in NC[ http://proceedings.esri.com/library/userconf/seuc15/papers/seruc_64.pdf](http://proceedings.esri.com/library/userconf/seuc15/papers/seruc_64.pdf)
+- [NC Clean Energy Technology Center](https://nccleantech.ncsu.edu/2019/11/06/the-50-states-of-electric-vehicles-states-consider-a-variety-of-utility-led-transportation-electrification-initiatives-in-q3-2019/) has done a lot of research and advocacy for EVs in NC
+- Plug In NC: https://pluginnc.com/charging-levels/
+  - Teaches you a bit about charging levels – we might have to pick the type of charger we’ll be using
+- Go Electric Drive: Charging Locator : https://www.goelectricdrive.org/charging-ev/charging-locator#/find/nearest
+  - Interactive map of charging locations; you can download the data!
+- This map, whose author could be identified and lead to a data set: https://pluginnc.com/wp-content/uploads/2019/12/2019-Map.pdf
+- DoE’s Alternative Fuels Data Center, which has links to charging station locations and available incentives/subsidies: https://afdc.energy.gov/fuels/electricity.html
+- This dataset and toolkit intended for GIS-based electric vehicle planning developed by MJ Bradley: https://www.mjbradley.com/mjb_form/EV-tools
+- North Carolina DoT’s 2019 Zero-Emission Vehicle plan: https://www.ncdot.gov/initiatives-policies/environmental/climate-change/Documents/nc-zev-plan.pdf
+- North Carolina transportation electrification policy overview to get more ideas: https://www.advancedenergy.org/2019/06/04/electrictransportationnc/
+- Installation & Operating Cost Data: https://rmi.org/pulling-back-veil-ev-charging-station-costs/
+- Business Charger Guide: https://www.ohmhomenow.com/electric-vehicles/electric-vehicle-charging-stations-business/ 
+- London installing chargers in street light: https://electrek.co/2017/11/14/london-electric-car-charging-stations-lamp-posts-street/ 
+- How to choose the best locations for public EV charging stations: https://www.fleetcarma.com/ev-charging-stations-choosing-best-locations/ 
+- Average charging times by vehicle: https://www.clippercreek.com/three-things-determine-ev-charge-time/ 
+- Extensive guidebook on EV charger install: https://www.driveelectricvt.com/Media/Default/docs/electric-vehicle-charging-station-guidebook.pdf 
+- Info on chargers and technical guidelines: https://www.emsd.gov.hk/filemanager/en/content_444/Charging_Facilities_Electric_Vehicles.pdf 
+- [EV charger finder](https://na.chargepoint.com/charge_point)
+- [Another EV charger finder](https://www.plugshare.com/)
+- [state transportation map](https://www.ncdot.gov/travel-maps/maps/Pages/state-transportation-map.aspx)
+- [THE STATE OF THE CHARGE - Report of the Electric Vehicle Charging Industry](http://www.evassociation.org/stateofthecharge.html)
+- [EV Charging Station Cost](https://www.ohmhomenow.com/electric-vehicles/ev-charging-station-cost/)
+- [The Real Price of EV Public Charging](https://www.plugincars.com/guide-to-public-charging-costs.html)
+- https://www.mdpi.com/2071-1050/9/4/484/pdf 
+- https://www.researchgate.net/publication/319773218_Finding_Key_Factors_Affecting_the_Locations_of_Electric_Vehicle_Charging_Stations_a_Simulation_and_ANOVA_Approach
+- http://www.gflrpc.org/uploads/5/0/4/0/50406319/ev_site_checklist_v03-01.pdf
+- https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC
+- http://www.hrccc.org/wp-content/uploads/Siting-EV-Charging-Stations-FINAL-12.pdf
+- https://ieeexplore.ieee.org/abstract/document/6183283
+-  [Finding the optimal location for public charging stations – a GIS-based MILP approac](https://www.sciencedirect.com/science/article/pii/S1876610219300803)
+- Electric Charging Demand Location Model—A User and Destination-Based Locating Approach for Electric Vehicle Charging Stations
+- [A multi-factor GIS method to identify optimal geographic locations for electric vehicle (EV) charging stations](https://www.proc-int-cartogr-assoc.net/1/127/2018/ica-proc-1-127-2018.pdf)

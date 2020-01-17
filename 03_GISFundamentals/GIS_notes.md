@@ -113,3 +113,24 @@ https://datacarpentry.org/organization-geospatial/
 * Create your AGOL account
 * Make a map! 
 * Finding data
+
+----
+
+#### Candidate sites
+
+* Data on exits
+
+* Compute distance from exit (Euclidean, Network)
+
+#### Site restrictions
+
+* Distance to transmission lines
+* Available land
+* Businesses
+* Existing gas station
+
+#### Site prioritization
+
+* Not redundant
+* Expands network
+* In area of economic need
