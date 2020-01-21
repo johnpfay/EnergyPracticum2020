@@ -13,19 +13,95 @@ https://automating-gis-processes.github.io/site/
 * Spatial analyses
 * Visualizing data
 
-## Getting started
+## Schedule
 
-* Python Set up: {[link](https://automating-gis-processes.github.io/CSC18/course-info/Installing_Anacondas_GIS.html#install-python-gis-on-windows)}
-  * Python | Conda | Jupyter
-  * **Exercise**: Create a new Conda environment & run a Jupyter notebook. 
-* Python Fundamentals: 
-  * Variable assignment & data types | syntax: iteration & conditionals 
-  * Extending python: built-in packages
-  * **Exercise**: Jupyter notebook exercises ([link](https://github.com/DataDevils/Python-Exercises/blob/master/Exercise%201%20-%20Python.ipynb))
-* 3rd party packages
-  * Installing packages with Conda
-  * Useful packages: NumPy, Pandas, Geopandas, Rasterio, ArcGIS, Matplotlib, Seaborne, Plotnine
-  * **Exercise**: Install packages and run notebooks
+| Week | Theme                                                        |
+| ---- | ------------------------------------------------------------ |
+| 1    | Python crash course                                          |
+| 2    | Shapely and geometric objects (points, lines and polygons)   |
+| 3    | Managing spatial data with Geopandas (reading and writing data, projections, table joins) |
+| 4    | OpenStreetMap data (osmnx) and Network analysis (networkx)   |
+| 5    | Visualization: static and interactive maps                   |
+
+
+
+## 1. Python Crash Course
+
+* Where to write Python?
+
+  * Notebooks: Local (ArcGIS Pro | Anaconda); Cloud (Binder | Jupyter Server)
+  * IDE's: Local (Spyder | PyCharm)
+  * ACTIVITY: Open Jupyter associated with ArcGIS & Open A Taste of Python
+
+* A taste of Python
+
+  * Simple Python math
+  * Functions
+  * Math operations (importing libraries)
+  * Combining functions
+  * Variables
+  * Updating variables
+  * Variable values
+  * Data types
+  * Character input
+
+* More on Python
+
+  * Conda environments
+  * Installing packages
+
+  
+
+## 2. Shapely and geometric objects (points, lines and polygons)
+
+* GIS data models: **vector** vs raster
+* Geometric objects
+  * Question: How would you represent various features by these objects? 
+* The Shapely library: how to import
+  * GEOS library
+* Exercise
+  * Create a point & show
+  * Create two more points (what are the numbers?)
+  * Print points
+  * Type points
+  * Tab complete
+* Create a linestring
+  * From points
+  * From coordinates
+  * *Introducing Lists*
+* Line operations
+* Polygons
+* Geometry collections
+* EXERCISE
+  * Import the shapely geometry objects (Point, LineString, Polygon)
+  * Create a point feature called "[Durham](https://www.latlong.net/place/durham-nc-usa-3468.html)" at coordinate (X=689,420, Y=3,985,329)
+  * Create a second point feature called "[ChapelHill](https://www.latlong.net/place/chapel-hill-nc-usa-3466.html)" at coordinate (X=675,424, Y=3,976,067)
+  * Create a second point feature called ["Raleigh"](https://www.latlong.net/place/raleigh-nc-usa-7275.html) at coordinate (X=712,904, Y=3,962,967)
+  * Compute the distance between Durham and Chapel Hill
+  * Compute the area encompassed by "the Triangle"
+
+
+
+## 3. Managing spatial data with Geopandas
+
+* [Intro to GeoPandas](https://automating-gis-processes.github.io/site/notebooks/L2/geopandas-basics.html#Introduction-to-Geopandas)
+  * Series, DataFrames → GeoSeries, GeoDataframe
+  * Importing shapefiles into GeoPandas
+  * GeoDataframe attributes
+  * Plotting GeoDataframes
+  * Geometries in GeoPandas
+  * Subsetting
+  * Grouping
+  * Writing out to shapefiles
+* [Projections](https://automating-gis-processes.github.io/site/notebooks/L2/projections.html)
+  * GeoDataframe "crs" attribute
+  * Projection: Copy then "to_crs"
+* Calculating distances
+* 
+
+
+
+---
 
 ## Getting spatial data
 
@@ -66,3 +142,19 @@ https://automating-gis-processes.github.io/site/
 
 ## Visualizing data
 
+---
+
+## Exercise ideas
+
+#### 1. Mapping DCFC locations
+
+* Convert table of existing DCFC locations to shapely points
+* Transform to UTM
+
+#### 2. Calculating distances between DFCF locations
+
+#### 3. Demographics surrounding DCFC locations
+
+* Read Census block_groups shapefile into shapely objects
+* Select block_groups within 3 miles of each DCFC 
+* Summarize block_group demographics
