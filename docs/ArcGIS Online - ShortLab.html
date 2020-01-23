@@ -1,0 +1,685 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Getting to know ArcGIS Online</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    text-indent: 0.0rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 10px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: Blue;
+    font-weight: 600;
+    padding: 0 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0 px;
+	padding: 0 0px;
+},
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+h2 a,
+h3 a {
+    color: #34495e;
+}
+
+h1 {
+    padding-bottom: .2rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin: 15px 0 15px;
+    border-bottom: 0px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+    padding: 10px 15px;
+    color: #777;
+    background-color: rgba(66, 185, 131, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0 1px;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+.md-toc-h1 {
+  display: none;
+}
+.md-toc-h4 {
+  display: none;
+}
+.md-toc-h5 {
+  display: none;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><div align="center">
+    <h3><a href="./index.html">ENV 761 (Swenson/Fay) - Conservation GIS</a></h3>
+</div><h1><a name="getting-to-know-arcgis-online" class="md-header-anchor"></a><span>Getting to Know ArcGIS Online </span></h1><hr /><h3><a name="learning-objectives" class="md-header-anchor"></a><span>Learning Objectives</span></h3><ul><li><span>Initiate and navigate your AGOL account profile</span></li><li><span>Understand the structure, components, and capabilities of AGOL</span></li><li><span>Use AGOL to find content &amp; types of content</span></li><li><span>Map and analyze data found on AGOL, in AGOL and ArcGIS Pro</span></li></ul><h3><a name="assignment" class="md-header-anchor"></a><span>Assignment</span></h3><ul><li><span>Read the lab document introducing ArcGIS Online</span></li><li><span>Create and modify your Duke AGOL account</span></li><li><span>Complete ESRI&#39;s ArcGIS Online Basics tutorial</span></li><li><span>Complete the analysis looking at susceptible swine lagoons in North Carolina</span></li><li><span>Answer the questions at the end of this document</span></li></ul><hr /><h2><a name="what-is-arcgis-online" class="md-header-anchor"></a><span>What is ArcGIS Online? </span></h2><p><span>ESRI provides a nice encapsulation of what ArcGIS Online (AGOL) is here:</span></p><blockquote><p><em><span>ArcGIS Online is a collaborative, cloud-based platform that allows members of an organization to use, create, and share maps, apps, and data, including authoritative basemaps published by Esri. Through ArcGIS Online, you get access to ESRI&#39;s secure cloud, where you can manage, create, store, and access data as published web layers, and because ArcGIS Online is an integral part of the ArcGIS system, you can use it to extend the capabilities of ArcGIS for Desktop, ArcGIS for Server, ArcGIS apps, and ArcGIS Web APIs and ArcGIS Runtime SDKs.</span></em></p><p><span>(From: </span><a href='http://doc.arcgis.com/en/arcgis-online/reference/what-is-agol.htm' target='_blank' class='url'>http://doc.arcgis.com/en/arcgis-online/reference/what-is-agol.htm</a><span> )</span></p></blockquote><p><span>Basically, AGOL is part of ESRI&#39;s rapidly evolving GIS &#39;ecosystem&#39; that leverages the network/internet/web/cloud (whatever you want to call it) to facilitate data sharing and collaboration among GIS users. AGOL is not yet positioned to replace Desktop ArcGIS, but it&#39;s definitely moving in that direction. More and more it&#39;s becoming an indispensable resource for:</span></p><ul><li><span>Finding and accessing content to use in your geospatial analyses</span></li><li><span>Storing, organizing, and sharing your own GIS content</span></li><li><span>Performing basic GIS analyses without needing to install GIS software on your machine</span></li></ul><p><span>We&#39;ll get a much better idea of what AGOL is and what it can do by interacting with it, which is the focus of this tutorial. I also encourage you to explore the on-line material by ESRI published here:</span>
+<a href='http://doc.arcgis.com/en/arcgis-online/reference/faq.htm' target='_blank' class='url'>http://doc.arcgis.com/en/arcgis-online/reference/faq.htm</a></p><p>&nbsp;</p><h2><a name="access-to-arcgis-online-nsoes-organizational-agol-portal" class="md-header-anchor"></a><span>Access to ArcGIS Online: </span><em><span>NSOE&#39;s Organizational AGOL Portal</span></em></h2><p><span>Access to ArcGIS Online is by subscription only, i.e., it&#39;s not free (though you can create a public account with limited capabilities or sign up for a free 30-day pass). However, as part of our site license, ESRI has granted Duke an </span><strong><span>organizational account</span></strong><span> to AGOL and anyone in the Duke community can access AGOL via this portal; anyone with a valid Duke NetID has access to that account. The portal is accessed via this URL: </span><a href='https://dukeuniv.maps.arcgis.com' target='_blank' class='url'>https://dukeuniv.maps.arcgis.com</a><span>. </span></p><p><span>Something new that we are trying this semester, however, is using a separate AGOL organizational portal, </span><em><span>one specific to just the Nicholas School</span></em><span>. This site is accessed here: </span><a href='https://nsoe.maps.arcgis.com' target='_blank' class='url'>https://nsoe.maps.arcgis.com</a><span>. You all should have received an email inviting you to create an account on this portal. Using this site for class exercises allows you a separate &quot;sand box&quot; to play in without affecting your &quot;official&quot; Duke AGOL site. </span></p><blockquote><p><strong><span>→ If you have not received an email and/or activated your AGOL account, please see John before proceeding. </span></strong></p><p><strong><span>→ Enterprise logins do NOT work with the NSOE ArcGIS Online Portal...</span></strong></p></blockquote><p>&nbsp;</p><h2><a name="♦-task-1-edit-your-arcgis-profile-and-join-the-class-group" class="md-header-anchor"></a><span>♦ TASK 1: Edit your ArcGIS Profile and join the class group</span></h2><p><span>Sign into the NSOE ArcGIS Online portal : </span><a href='https://nsoe.maps.arcgis.com' target='_blank' class='url'>https://nsoe.maps.arcgis.com</a><span>. Once signed in:</span></p><ul><li><p><span>Navigate to your </span><strong><span>profile</span></strong><span> and </span><strong><span>edit</span></strong><span> your settings. </span></p><ul><li><span>By default, who can see your profile? Change your profile so that everyone can see it.</span></li><li><span>Enter your email and some information for your </span><strong><span>bio</span></strong><span>. </span></li><li><span>To what &quot;role&quot; do you belong? What privileges are associated with this role? </span></li><li><span>Save your changes.</span></li></ul></li><li><p><span>Then, go to the </span><strong><span>Groups</span></strong><span> tab at the top, find the </span><strong><span>ENV761_2020</span></strong><span> group and join it.  </span></p><ul><li><span>Be sure to select &quot;My Organization&#39;s Groups&quot; at the top to reveal the ENV761_2020 group. </span></li></ul></li><li><p><span>Within the </span><strong><span>Content</span></strong><span> pane, create a new folder called &quot;Hog Farm Analysis&quot;</span></p></li></ul><p><span>Briefly review the structure of your AGOL site. Next, we&#39;ll do an ESRI tutorial to better understand what AGOL can do and how to do it. </span></p><p>&nbsp;</p><h2><a name="♦-task-2-complete-esris-arcgis-online-basics-tutorial" class="md-header-anchor"></a><span>♦ TASK 2: Complete ESRI&#39;S ArcGIS Online Basics tutorial</span></h2><p><span>ESRI provides an excellent tutorial to get you started on what AGOL is and what it can do. This tutorial is available here: </span></p><p><a href='https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/' target='_blank' class='url'>https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/</a></p><p><span>Your next task is to complete this tutorial. It will help you with Task 3. </span></p><ul><li><span>Click on the link above to start the tutorial. Sign in to your NSOE AGOL account, if not already. </span></li><li><span>Launch the course. </span></li></ul><p>&nbsp;</p><h2><a name="♦-task-3-swine-lagoons-breaches-in-north-carolina" class="md-header-anchor"></a><span>♦ TASK 3: Swine Lagoons Breaches in North Carolina</span></h2><p><span>We&#39;ll now apply knowledge gained from the tutorial to a new case study. We will use ArcGIS Online to create a map of hog farms in North Carolina in relation to rivers and streams and then use this map to (1) describe spatial patterns in hog farm distribution across the state, and (2) make a rough estimate of the number of farms that may be breached during a storm like Hurricane Florence. </span></p><p><span>Below is a brief sketch of the background to the problem. And below that are steps will guide you through your analysis. </span></p><blockquote><p><span>Hurricane Florence made landfall near Wrightsville Beach, North Carolina, on September 14, 2018. The slow-moving, category 1 storm produced more than 2 feet of rain that flooded many low-lying areas housing many of the state’s hog farms. State officials estimated more than 5,000 hogs were killed. Further, rising floodwaters breached two dozen storage areas containing hog waste. The rising waters caused manure to overflow their lagoons and contaminate surrounding waterways. </span><strong><span>As a state-level GIS analyst, your task is to identify the lagoons located within 1 mile of a river, so officials can mitigate public risk.</span></strong></p><p><a href='https://www.youtube.com/watch?v=pQaxUA6aWQg' target='_blank' class='url'>https://www.youtube.com/watch?v=pQaxUA6aWQg</a></p></blockquote><h3><a name="i-make-a-map-of-hog-farms-and-streams-in-north-carolina" class="md-header-anchor"></a><span>I. Make a map of hog farms and streams in North Carolina</span></h3><p><span>We&#39;ll start by gathering the data we need to perform our analysis, searching for on-line datasets and adding them to a new AGOL map. </span></p><ol start='' ><li><p><strong><span>Make a new AGOL map</span></strong><span>.</span></p><ul><li><span>Log into your Duke ArcGIS Online organizational account and create a new map. </span></li><li><span>Zoom your map to North Carolina. </span></li><li><span>Experiment with different base maps.</span></li></ul><p>&nbsp;</p></li><li><p><strong><span>Find and add the</span></strong><span> </span><code>NC Animal Operation Permits</code><span> dataset to your map. </span></p><ul><li><p><span>Search </span><em><span>ArcGIS Online</span></em><span> using the keywords &quot;</span><strong><span>NC CAFOs</span></strong><span>&quot;. </span></p></li><li><p><span>Sort results on &quot;</span><strong><span>view count</span></strong><span>&quot;; the top record&#39;s owner should be </span><em><span>mmwilliams_ncdenr</span></em><span>. This is the one we will use.</span></p></li><li><p><span>View the item details associated with this feature layer and record answers to the following questions. (You&#39;ll report these answers in your lab submission...)</span></p><ul><li><span>When was the dataset first created? Last updated?  </span></li><li><span>Other than hogs/swine, what other animal waste sources are included in this dataset?(HINT: click the link found in the item summary pane)</span></li></ul></li><li><p><span>Add the feature layer to your AGOL map. </span></p></li><li><p><span>Open the attribute table associated with the feature layer. Record how many features are in this dataset?</span></p></li></ul><p>&nbsp;</p></li><li><p><strong><span>Filter</span></strong><span> the NC Animal Operations Permits layer so that only </span><strong><span>swine</span></strong><span> records are shown. </span></p><ul><li><p><span>These should be records with &quot;Type&quot; equal to &quot;Swine State COC&quot; or &quot;Swine NPDES COC&quot;. </span></p></li><li><p><span>Open the table associated with the layer; you should now have </span><strong><span>2051</span></strong><span> records that meet your criteria.</span></p></li><li><p><span>Rename this layer &quot;</span><strong><span>NC Swine Lagoons</span></strong><span>&quot;</span></p><p>&nbsp;</p></li></ul></li><li><p><strong><span>Symbolize</span></strong><span> the swine so that all points have the same symbol</span></p><ul><li><p><span>Play with the size, shape, fill and outline colors, and transparency of the symbol to make the data reasonably legible. </span></p><p>&nbsp;</p></li></ul></li><li><p><strong><span>Find and add</span></strong><span> the </span><code>USA Counties</code><span> dataset.</span></p><ul><li><span>Search the </span><em><span>Living Atlas</span></em><span> using the keyword &quot;</span><strong><span>Counties</span></strong><span>&quot;.</span></li><li><span>Filter results for </span><strong><span>Feature Layers</span></strong><span> that are </span><strong><span>Authoritative</span></strong><span>.</span></li><li><span>Select the </span><strong><span>USA Counties (Generalized)</span></strong><span> layer and add to your map. </span></li></ul><p>&nbsp;</p></li><li><p><strong><span>Filter</span></strong><span> the USA Counties layer for only NC Counties</span></p><ul><li><p><span>Create and apply a filter to select just counties in North Carolina.</span></p></li><li><p><span>Rename the layer &quot;</span><strong><span>NC Counties&quot;</span></strong></p><p>&nbsp;</p></li></ul></li><li><p><strong><span>Symbolize</span></strong><span> counties so they appear on your map, but they don&#39;t dominate it</span></p><ul><li><span>Try using a fully transparent fill and a subtle, semi-transparent outline</span></li></ul><p>&nbsp;</p></li><li><p><strong><span>Find and add</span></strong><span> a </span><code>USA Rivers and Streams</code><span> data layer to your map.</span></p><ul><li><span>Search ArcGIS Online for &quot;</span><strong><span>USA Streams</span></strong><span>&quot;</span></li><li><span>Filter results for </span><u><span>Feature Layers</span></u><span> that are </span><u><span>Authoritative</span></u></li><li><span>Add the layer named &quot;USA Rivers and Stream&quot; (Not &quot;USA Detailed Streams&quot;) to your map. </span></li></ul><p>&nbsp;</p></li><li><p><strong><span>Filter</span></strong><span> the USA Rivers and Streams for just NC rivers and streams and rename the layer.</span></p><ul><li><span>Create and apply a filter where State = &quot;NC&quot;</span></li><li><span>Rename the layer to &quot;</span><strong><span>NC Rivers and Streams</span></strong><span>&quot;</span></li></ul><p>&nbsp;</p></li><li><p><strong><span>Save</span></strong><span> your map:</span></p><ul><li><span>Zoom your map to the extent of North Carolina.</span></li><li><span>Title: </span><code>North Carolina Hog Farms in Flood Danger</code></li><li><span>Tags: </span><code>Hogs</code><span>, </span><code>ENV761</code></li><li><span>Summary: </span><code>Research into hog farms at risk of sewage overflow</code></li><li><span>Save to your Hog Lagoons folder</span></li></ul></li></ol><p>&nbsp;</p><ol start='11' ><li><p><strong><span>Share</span></strong><span> your map: </span></p><ul><li><span>Share your map with everyone. </span></li><li><span>Record the link to your map. e.g. </span><a href='https://arcg.is/0DTPei0' target='_blank' class='url'>https://arcg.is/0DTPei0</a></li></ul></li></ol><p><span>   </span></p><h4><a name="►map-challenge-heat-maps" class="md-header-anchor"></a><span>►Map Challenge: Heat Maps</span></h4><p><span>Your map should reveal where in North Carolina hog farms/swine lagoons are concentrated by the location of the points. However, even though your swine lagoon points may be set as transparent, they don&#39;t reveal overlapping points. A more effective way to communicate concentration is a &quot;heat map&quot;. See if you can create a heat map from your data.</span></p><ul><li><span>Make a copy of the NC Swine Lagoons layer, renaming the new layer &quot;NC Swine Lagoons Heat Map&quot;.</span></li><li><span>Alter the symbology so that instead of points for each lagoon, it shows a heat map. </span></li></ul><p>&nbsp;</p><h3><a name="ii-summarize-swine-lagoons-by-county" class="md-header-anchor"></a><span>II. Summarize Swine Lagoons by County</span></h3><p><span>Industrial hog waste is stored in lagoons susceptible to overflow when floodwaters rise above the earthen embankments storing the manure. You need to create a map showing the number of lagoons in each county.</span></p><ol start='' ><li><p><span>Click the </span><strong><span>Perform Analysis</span></strong><span> button underneath the NC Swine Lagoons layer. </span></p><p><img src=".\media\AnalysisButton.png" referrerpolicy="no-referrer" alt="Analysis Button"></p></li><li><p><span>Click </span><strong><span>Summarize Data</span></strong><span> and then </span><strong><span>Summarize Within</span></strong></p></li><li><p><span>In the </span><strong><span>Summarize Within</span></strong><span> pane, do the following:</span></p><ul><li><span>For </span><strong><span>Choose the polygon layer</span></strong><span>, select NC Counties</span></li><li><span>For </span><strong><span>Choose a layer to summarize</span></strong><span>, select NC Swine Lagoons</span></li><li><span>For </span><strong><span>Result layer name</span></strong><span>, type &quot;Number of lagoons in each county&quot;</span></li><li><span>Save your results in the </span><strong><span>Hog Farm Analysis</span></strong><span> folder created earlier</span></li><li><span>Uncheck </span><strong><span>Use current map extent</span></strong><span>. </span></li><li><span>Click </span><strong><span>Run Analysis</span></strong><span>.</span></li></ul></li><li><p><span>On the layer you just created (when it appears), point to </span><strong><span>More Options</span></strong><span> and select </span><strong><span>Create Labels</span></strong><span>.</span></p><ul><li><span>In the </span><strong><span>Label Features</span></strong><span> layer, for </span><strong><span>Text</span></strong><span>, click the drop-down arrow and select </span><strong><span>Count of Points</span></strong><span>. You are encouraged to play with the label style.</span></li><li><span>Click </span><strong><span>OK</span></strong><span>.</span></li></ul><blockquote><p><span>At this point, the map reflects the concentrations of hog farms, but there’s so much data that the map’s meaning is unclear. Turning off distracting layers clarifies your intent.</span></p></blockquote></li><li><p><span>In Contents, uncheck the layers for NC Swine Lagoons (points, and heatmap if you created that)and NC Rivers and Streams.</span></p></li></ol><p>&nbsp;</p><h4><a name="►-map-challenge-swine-lagoons-by-county" class="md-header-anchor"></a><span>► Map Challenge: Swine Lagoons by County</span></h4><ul><li><p><span>Create a map showing each NC county shaded by the number of hog farms it contains (more hog farms = darker shade). Label only the counties with one or more hog farms. The result should appear somewhat similar to the map below:</span><img src=".\media\BonusMap.png" referrerpolicy="no-referrer"></p><blockquote><p><span>Tips:</span></p><ul><li><span>You may need to make a copy of an existing layer.</span></li><li><span>You may need to filter out records.</span></li><li><span>Explore various options in the symbology of layers</span></li></ul></blockquote></li></ul><ul><li><span>Save this map under a different name in your Hog Lagoons Analysis folder (use Save As...) </span></li><li><span>Share with everyone and record its URL, e.g. </span><a href='https://arcg.is/1Crvr90' target='_blank' class='url'>https://arcg.is/1Crvr90</a></li></ul><p>&nbsp;</p><h3><a name="iii-add-a-buffer-to-rivers-and-streams" class="md-header-anchor"></a><span>III. Add a Buffer to Rivers and Streams</span></h3><p><span>In this step you&#39;ll add a 1-mile buffer to rivers and streams throughout North Carolina, so you can see which hog farms are vulnerable to rising floodwaters. </span></p><ol start='' ><li><p><span>Select the </span><strong><span>NC Rivers and Streams</span></strong><span> layers and click </span><strong><span>Perform Analysis</span></strong><span>.</span></p></li><li><p><span>Click </span><strong><span>Use Proximity</span></strong><span> and click </span><strong><span>Create Buffers</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Create Buffers</span></strong><span> pane, do the following:</span></p><ul><li><span>For </span><strong><span>Enter buffer</span></strong><span> size, ensure the setting is </span><strong><span>1 Miles</span></strong><span>.</span></li><li><span>Expand </span><strong><span>Options</span></strong><span> and click </span><strong><span>Dissolve</span></strong><span>.</span></li><li><span>For </span><strong><span>Result layer name</span></strong><span>, type </span><strong><span>Buffer 1 mile</span></strong><span>.</span></li><li><span>Save results in your </span><strong><span>Hog Farm Analysis</span></strong><span> folder</span></li><li><span>Uncheck </span><strong><span>Use current map extent</span></strong><span>.</span></li><li><span>Click </span><strong><span>Run Analysis</span></strong><span>. </span></li></ul></li></ol><p><span>In the next step, you&#39;ll identify the swine lagoons located within this buffer zone. </span></p><p>&nbsp;</p><h3><a name="iv-intersect-swine-lagoons-within-the-buffer-area" class="md-header-anchor"></a><span>IV. Intersect Swine Lagoons within the Buffer Area</span></h3><p><span>You&#39;re interested in the swine lagoons within the 1-mile buffer. To isolate those lagoons, you&#39;ll use the intersect tool. </span></p><ol start='' ><li><p><span>Select the </span><strong><span>Buffer 1 mile</span></strong><span> layer you just created and click </span><strong><span>Perform Analysis</span></strong><span>.</span></p></li><li><p><span>Click </span><strong><span>Manage Data</span></strong><span> and click </span><strong><span>Overlay Layers</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Overlay layers</span></strong><span> pane, do the following: </span></p><ul><li><span>For </span><strong><span>Choose input layer</span></strong><span>, select </span><strong><span>NC Swine Lagoons</span></strong><span>.</span></li><li><span>For </span><strong><span>Choose overlay layer</span></strong><span>, select </span><strong><span>Buffer 1 mile</span></strong><span>.</span></li><li><span>For </span><strong><span>Choose overlay</span></strong><span> method, verify </span><strong><span>Intersect</span></strong><span>.</span></li><li><span>For </span><strong><span>Output</span></strong><span>, verify </span><strong><span>Points</span></strong><span>.</span></li><li><span>For </span><strong><span>Result layer name</span></strong><span>, type </span><strong><span>Endangered lagoons</span></strong><span>.</span></li><li><span>Uncheck </span><strong><span>Use current map extent</span></strong><span>.</span></li><li><span>Click </span><strong><span>Run Analysis</span></strong></li></ul></li></ol><blockquote><p><span>► Can you think of an alternative way of performing this analysis? One that does not require creating the &quot;Buffer 1 mile&quot; layer. </span></p></blockquote><p><span>The resulting map is confusing. By changing symbol colors, unchecking layers, altering the base map, and other changes you can clarify its message - namely, which lagoons are within the buffer. </span></p><p>&nbsp;</p><h3><a name="v-create-a-presentation-of-your-findings" class="md-header-anchor"></a><span>V. Create a Presentation of your findings</span></h3><p><span>Finally, we&#39;ll prepare a brief slide show presenting our results as a series of map. This is done by first saving your map (you may wish to save this using a new name, e.g. &quot;North Carolina Hog Farms in Flood Danger-Presentation&quot;), sharing your map (with everyone), and then clicking &quot;</span><strong><span>Create Presentation</span></strong><span>&quot; in the upper right corner of your browser window.</span></p><p><span>In Presentation mode, you can add slides where each slide includes its own properties, i.e. title, map extent, layers shown, zoom, etc. Create the following slides in your presentation:</span></p><ul><li><p><strong><span>Slide 1:</span></strong><span> </span></p><ul><li><span>Zoom to North Carolina and Set Location to Current</span></li><li><span>Title the slide: </span><strong><span>North Carolina Swine Lagoons</span></strong></li><li><span>Display Swine lagoon locations as points, with NC county boundaries.</span></li><li><span>Set base map to something subtle, e.g light or dark grey canvas or Human Geography Map.</span></li></ul></li><li><p><strong><span>Slide 2:</span></strong></p><ul><li><span>Remain zoomed to North Carolina</span></li><li><span>Title: </span><strong><span>North Carolina Swine Lagoons Heat Map</span></strong></li><li><span>Display Swine lagoon locations as a heat map (no points), with county boundaries.</span></li><li><span>Base map, same as above.</span></li></ul></li><li><p><strong><span>Slide 3:</span></strong><span> </span></p><ul><li><span>Zoom: North Carolina</span></li><li><span>Title: </span><strong><span>Swine Lagoon Count by County, North Carolina</span></strong></li><li><span>Display your swine lagoon count by county, with labels.</span></li><li><span>Base map, same as above.</span></li></ul></li><li><p><strong><span>Slide 4:</span></strong></p><ul><li><p><span>Zoom: Duplin County</span></p></li><li><p><span>Title: </span><strong><span>Endangered Swine Lagoons, Duplin Co.</span></strong></p></li><li><p><span>Display: </span></p><ul><li><span>Swine lagoon points</span></li><li><span>Endangered swine lagoon points</span></li><li><span>NC Streams and Rivers</span></li><li><span>1 mile buffer</span></li></ul></li><li><p><span>Base map: You choose</span></p></li></ul></li></ul><p><span>Save your presentation and Play it. Submit the URL associated with the presentation in Play mode on Sakai. </span>
+<span>Example: </span><a href='https://nsoe.maps.arcgis.com/apps/presentation/index.html?webmap=4d9f91811bee48909dbbce5d51144e75&amp;slide=1' target='_blank' class='url'>https://nsoe.maps.arcgis.com/apps/presentation/index.html?webmap=4d9f91811bee48909dbbce5d51144e75&slide=1</a></p><p>&nbsp;</p><h3><a name="discussion" class="md-header-anchor"></a><span>Discussion</span></h3><ol start='' ><li><span>What key assumptions are made in this analysis? How might they affect the results?</span></li><li><span>What are some other datasets that might improve the reliability of this analysis? Can you find any of these? </span></li></ol><p>&nbsp;</p><h2><a name="deliverables" class="md-header-anchor"></a><span>Deliverables:</span></h2><p><span>Within the class Sakai site, under the Test &amp; Quizzes section, find the AGOL Exercise entry. Submit the following in this form:</span></p><ul><li><p><span>The date the NC Animal Permit Locations data layer was created</span></p></li><li><p><span>The animal waste types included in this data layer</span></p></li><li><p><span>The number of records included in this layer</span></p></li><li><p><span>The URL of your Hog Lagoon map shared with the ENV761 group (e.g. </span><a href='http://arcg.is/ujeCm' target='_blank' class='url'>http://arcg.is/ujeCm</a><span>). </span>
+<span>This map should be zoomed to North Carolina and include:</span></p><ul><li><strong><span>NC Swine lagoons</span></strong><span> (filtered swine points from Animal Operations Permit data set), shown as a single feature type. </span></li><li><strong><span>NC Counties</span></strong><span> (filtered from the Generalized USA county layer), displayed so as not to dominate the map. </span></li><li><strong><span>NC Rivers and Streams</span></strong><span> (filtered from the USA Rivers and Streams dataset). </span></li></ul><p><span>The map should be saved with the Title, Tags, and Summary mentioned above. </span></p></li></ul><ul><li><p><span>The URL of your map showing the number of swine lagoons by county. This map should:</span></p><ul><li><span>Be shared with everyone,</span></li><li><span>Show NC counties shaded by the number of swine lagoons and</span></li><li><span>Show labels for each county with at least one lagoon indicating the number of lagoons found in the county. </span></li></ul><p><span>Other layers can appear in the map but should be turned off.</span></p></li><li><p><span>The URL of presentation</span></p></li><li><p><span>Discussion question #1</span></p></li><li><p><span>Discussion question #2</span></p></li></ul><p>&nbsp;</p></div>
+</body>
+</html>
