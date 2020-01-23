@@ -6,7 +6,7 @@ Data: Spring 2020
 
 # GIS Practicum (Energy): *"Zero to GIS in Python"*
 
-* Python 101 - https://geo-python.github.io/site/
+* Dive into Python - https://geo-python.github.io/site/
   * Set up your Python environment
   * Overview of Jupyter notebooks
   * A taste of Python - https://geo-python.github.io/site/notebooks/L1/a-taste-of-python.html
