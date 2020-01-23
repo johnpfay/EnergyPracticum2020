@@ -1,5 +1,5 @@
 ---
-Title: Python 101
+Title: Dive into Python
 Author: John Fay
 Data: Spring 2020
 ---
