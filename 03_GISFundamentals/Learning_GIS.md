@@ -133,24 +133,22 @@ Rather than upload Jupyter notebook files individually, we will pull a set of le
 
 
 
-
-
 ### Course format
 
-The Automating GIS Processes includes 7 lessons from which we will draw. These are listed [here](https://automating-gis-processes.github.io/site/index.html#course-topics-by-week): 
+With our material now copied to our ENVIRON859 environment, we'll now embark on the material, which again will follow the Automating GIS Processes site. That site includes a set of learning goals, listed [here](https://automating-gis-processes.github.io/site/course-info/learning-goals.html):
 
-| Week  | Theme                                                        |
-| ----- | ------------------------------------------------------------ |
-| **1** | Shapely and geometric objects (points, lines and polygons)   |
-| **2** | Managing spatial data with Geopandas (reading and writing data, projections, table joins) |
-| **3** | Geocoding and spatial queries                                |
-| **4** | Reclassifying data, overlay analysis                         |
-| **5** | Visualization: static and interactive maps                   |
-| **6** | OpenStreetMap data (osmnx) and Network analysis (networkx)   |
-| **7** | Using Python in QGIS; Raster data processing                 |
-
-We won't have time to cover all this material in class so we will focus on that which is useful for our objectives. 
+| Week | Learning goals                                               |
+| :--: | ------------------------------------------------------------ |
+|  1.  | <u>**Shapely and geometric objects (points, lines and polygons)**</u><br />• Have an idea of what kind of tools are available for doing GIS in Python <br />• Understand what kind of geometric objects are available and what they are <br />• Know how to create different kind of geometries using Shapely <br />• Know how to read coordinates from a file and create Points based on those |
+|  2.  | <u>**Managing spatial data with Geopandas (reading and writing data, projections, table joins)**</u><br />• Read and write spatial data from/to common file formats <br />• Manage spatial data using Geopandas <br />• Re-project a geodatafame from one projection to another |
+|  3.  | **<u>Geocoding and spatial queries</u>**<br />• Do geocoding, i.e. converting addresses into Points (and vice versa)<br />• Conduct Point in Polygon queries Read data from KML file<br />• Make spatial and table joins between layers <br />• Find the nearest neighbor from Point -objects |
+|  4.  | **<u>Reclassifying data, overlay analysis</u>**<br />• Reclassify data based on different criteria (custom or common classifiers) <br />• Do overlay analysis & select data e.g. based on boundaries of another layer <br />• Aggregate data & merge geometric objects together, based on common id <br />• Simplify geometries |
+|  5.  | <u>**Visualization: static and interactive maps**</u><br />• Create a static map with background basemap using Geopandas & contextily <br />• Create a simple interactive map using either Bokeh or Folium (or both) <br />• Share your maps (static / interactive) on the internet using GitHub pages |
+|  6.  | **<u>OpenStreetMap data (osmnx) and Network analysis (networkx)</u>**<br />• Retrieve and save data from OpenStreetMap using Python <br />• Extract simple street network properties and statistics <br />• Do simple route optimization using shortest path algorithm in osmnx / networkx |
+|  7.  | **<u>Using Python in QGIS; Raster data processing</u>**<br />• Understand the basics of raster data processing using rasterio<br />• Be familiar with Python scripting in QGIS |
 
 
 
-### Learning Environment
+
+
+
