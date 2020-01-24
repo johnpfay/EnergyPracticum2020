@@ -33,3 +33,13 @@ Date: Spring 2020
 |  14  |  Apr 9  | Presentations                                                |                                                              |
 
 * [Data Links](./DataLinks.html) from your project contemplation assignments
+
+### ArcGIS Online Exercise
+
+> <u>Note</u>: If asked to log in, select the Enterprise option, then enter `nsoe.maps.arcgis.com` and use your ArcGIS Online username and password. 
+
+* https://learn.arcgis.com/en/projects/perform-a-site-suitability-analysis-for-a-new-wind-farm/
+
+* https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/ - Overview of ArcGIS Online
+
+  
