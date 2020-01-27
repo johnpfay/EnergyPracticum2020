@@ -55,3 +55,9 @@ While you are sifting through the material, some points to consider are listed b
 
 * Looking at the EV Infrastructure Location Identification Tool, what datasets are included. Are there any you are surprised to find? Where do you think these layers came from? Might they be available for us to use? 
 
+
+
+* How does MJB&A envision this tool being used? What updates are being planned? (And who is funding these updates?)
+
+
+
