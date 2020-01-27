@@ -20,14 +20,14 @@ Date: Spring 2020
 |  1   |  Jan 9  | [Introductions](./CourseIntroduction.html);[Course Overview](./CourseOverview.html);[Class set-up](./ClassSetup.html) | Class Set-up & [Project contemplation](./Task01_ProjectContemplation.html) |
 |  2   | Jan 16  | Guest: Tim Johnson ([slide deck](./Materials/TimJohnson_13Jan2020.pdf)) | [Summarize Tim's talk](./Task02_SpeakerReview.html)          |
 |  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks<br />Tutorial: [Project based GIS](./Project-based-GIS.html) | [Initial project proposal](./Task03_InitialProjectProposal.html) |
-|  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html) | Read MJB&A documents                                         |
+|  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html); ArcGIS Online | Read MJB&A documents                                         |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates                               | Summarize Talk                                               |
-|  6   | Feb 13  | Workshop: ArcGIS Online                                      | AGOL Tutorial                                                |
-|  7   | Feb 20  | Workshop: Spatial Data types                                 | Vector data exercise                                         |
-|  8   | Feb 27  | Workshop: Spatial analyses                                   | Raster data exercise                                         |
-|  9   |  Mar 5  | Workshop: Network analysis                                   | Network analysis exercise                                    |
+|  6   | Feb 13  | Workshop: Introduction and a dive into Python                | Python exercises                                             |
+|  7   | Feb 20  | Workshop: Geometric objects and the Shapely package          | Python exercises                                             |
+|  8   | Feb 27  | Workshop: Managing spatial data with GeoPandas               | Raster data exercise                                         |
+|  9   |  Mar 5  | Workshop: Spatial analyses with GeoPandas                    | Network analysis exercise                                    |
 | *10* | *Mar 7* | *No Class - Spring break*                                    | Outline project goals                                        |
-|  11  | Mar 19  | Project updates                                              | Project work                                                 |
+|  11  | Mar 19  | Workshop: Network analyses                                   | Python exercises                                             |
 |  12  | Mar 26  | Project updates                                              | Project work                                                 |
 | *13* | *Apr 2* | *No Class - MP Symposium*                                    | Project work                                                 |
 |  14  |  Apr 9  | Presentations                                                |                                                              |
