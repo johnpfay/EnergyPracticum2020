@@ -72,3 +72,12 @@ We'll now run through the `a-taste-of-python` notebook introducing us to many fe
 * Data types
 * Character input
 
+
+
+## More on Python
+
+* http://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html
+* https://jakevdp.github.io/WhirlwindTourOfPython/
+  * Try this in a Jupyter terminal: `git clone https://github.com/jakevdp/WhirlwindTourOfPython`
+  * Exercises: `git clone https://github.com/ENV859/PythonExercises`
+* https://www.datacamp.com/home
