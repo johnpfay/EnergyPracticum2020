@@ -22,7 +22,7 @@ Date: Spring 2020
 |  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks<br />Tutorial: [Project based GIS](./Project-based-GIS.html) | [Initial project proposal](./Task03_InitialProjectProposal.html) |
 |  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html); ArcGIS Online; Python | [Read MJB&A documents](./Task04_MJBA_documents.html)         |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates                               | Summarize Talk                                               |
-|  6   | Feb 13  | Workshop: Introduction and a dive into Python                | Python exercises                                             |
+|  6   | Feb 13  | Workshop: [Dive into Python](./Dive-into-Python.html)        | Python exercises                                             |
 |  7   | Feb 20  | Workshop: Geometric objects and the Shapely package          | Python exercises                                             |
 |  8   | Feb 27  | Workshop: Managing spatial data with GeoPandas               | Raster data exercise                                         |
 |  9   |  Mar 5  | Workshop: Spatial analyses with GeoPandas                    | Network analysis exercise                                    |
