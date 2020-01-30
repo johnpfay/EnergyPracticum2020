@@ -20,7 +20,7 @@ Date: Spring 2020
 |  1   |  Jan 9  | [Introductions](./CourseIntroduction.html);[Course Overview](./CourseOverview.html);[Class set-up](./ClassSetup.html) | Class Set-up & [Project contemplation](./Task01_ProjectContemplation.html) |
 |  2   | Jan 16  | Guest: Tim Johnson ([slide deck](./Materials/TimJohnson_13Jan2020.pdf)) | [Summarize Tim's talk](./Task02_SpeakerReview.html)          |
 |  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks<br />Tutorial: [Project based GIS](./Project-based-GIS.html) | [Initial project proposal](./Task03_InitialProjectProposal.html) |
-|  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html); ArcGIS Online; Python | [Read MJB&A documents](./Task04_MJBA_documents.html)         |
+|  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html); <br />Workshop: Intro to [ArcGIS Online](https://nsoe.maps.arcgis.com/home/index.html); Intro to [Python](https://geo-python.github.io/site/) | [Read MJB&A documents](./Task04_MJBA_documents.html)         |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates                               | Summarize Talk                                               |
 |  6   | Feb 13  | Workshop: [Dive into Python](./Dive-into-Python.html); [Learning GIS](./Learning_GIS.html) | Python exercises                                             |
 |  7   | Feb 20  | Workshop: Geometric objects and the Shapely package          | Python exercises                                             |
@@ -41,7 +41,6 @@ Date: Spring 2020
 * https://learn.arcgis.com/en/projects/perform-a-site-suitability-analysis-for-a-new-wind-farm/
 
 * https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/ - Overview of ArcGIS Online
-
 
 ---
 
