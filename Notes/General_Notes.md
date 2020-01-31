@@ -52,3 +52,22 @@ https://mjb-a.maps.arcgis.com/apps/webappviewer/index.html?id=06a73cb31d014f4f82
    * Synthesize and communicate results
    * Evaluate success and revise analysis
 
+---
+
+## Analyses
+
+* Establishing planning units - sites to be scored, ranked, evaluated, prioritized
+  * Exits along interstates
+  * Tessellated squares or hexagons
+* Distance from existing DCFC - Not too close, not too far
+  * Euclidean
+  * Network
+* Site feasibility
+  * Footprint, available space
+  * Accessibility to power
+  * Cost to link power 
+* Amenities 
+  * Services within walking distance
+  * Destinations within radius
+* Demand - enough cars to justify expense
+  * Traffic 
