@@ -30,7 +30,7 @@ Data: Spring 2020
   * [Set up] Real estate: Need to acquire land to install the charger
   * [Set up] Linkage to existing power infrastructure
 
-  * [Maintenance] Risk avoidance: avoid flooding, other disasters
+  * [Maintenance] Risk avoidance: avoid flooding, vandalism, other potentially damaging events
 
 * **Cost offsets**:
 
@@ -41,30 +41,36 @@ Data: Spring 2020
 
 ## *Actionable* Objectives:
 
-> Now we must translate our above factors into ones we can measure (paying particular attention to those which use GIS)
+> Now we must translate our above factors into ones we can measure (paying particular attention to those which use GIS). 
 
 * **Range anxiety**: To alleviate range anxiety, we first need to identify gaps within the existing infrastructure's service area, and then we prioritize new charging locations based on how they effectively the eliminate those gaps. All this, of course, depends very much on the range of the car, so that will be a variable in whatever model we generate. 
   * Map the service areas from existing DCFC locations (based on a given range.)
   * Identify gaps within those service areas
-  * Find a set of candidate sites that eliminate all gaps with as few new chargers as possible. 
-* **Inconvenience**: Here we need proxy information that allows us to quantify levels of inconvenience for each candidate site. We'll break this down into the various categories. 
-  * **Distance from interstate**: How far would a driver have to deviate from the likely course? 
-  * **Origin-destination distances**: Among all popular origin-destination pairs (e.g. major cities in NC), which candidate sites reduce the overall distances (i.e. minimizes having to drive off course just to charge the car).
-  * **Safety**: eliminate candidate sites in "high crime" areas; rank other sites based on "crime likelihood"
-  * **Amenities**: eliminate candidate sites that have zero amenities; rank other sites based on number of amenities
-    * Amenities = restaurants or cafes for now, but can include other businesses later
-* **Setup and maintenance costs**: 
-  * **Real-estate**: 
-    * Identify lots within a set proximity of each candidate site
-    * Exclude lots not meeting size criteria
-    * Exclude sites that are too expensive (or rank on cost)
-  * **Linkage to power grid**: 
-    * Map substations
-    * Compute distances away from existing substations
-    * For each candidate site/lot assign ranking based on distance from substation
-  * **Risk avoidance**: 
-    * Exclude lots within a floodplain
-* **Cost offsets**
+  * Find a set of candidate sites that eliminate all gaps with as few new chargers as possible.
+
+
+
+* **Inconvenience**: Here we need proxy information that allows us to quantify levels of inconvenience for each candidate site. We'll break this down into the various categories we mention above. And for each category, we outline what we might measure and how, in general terms, we might measure it.
+
+  * **Deviation from the shortest route**: Given a set of origin-destination pairs, how much longer would an electric vehicle have to travel just to ensure proper charging? What configuration of new chargers would reduce travel time the most? 
+  * **Avoiding excessive charging wait time**: Given current/projected traffic patterns and existing DCFC locations (or existing data on wait times at current charger locations), where might new chargers lower average wait times between origin-destination pairs?
+  * **Safety at charging locations**: Map out locations/conditions where security is a concern, perhaps using crime map data, lights and night data, or other viable proxies. Exclude candidate sites that fall within areas of security concern. 
+  * **Amenities at charging locations**: Map out all locations that might provide a reasonable distraction while waiting to charge (e.g., restaurants). Compute either a density map of these locations or a map showing areas within minimum distance to a set of these locations, and exclude candidate sites that fall outside acceptable ranges of these values. 
+
+  
+
+* **Setup and maintenance costs**: Again, we must find proxy information that allows us to quantify values. Here, the values relate to the cost of installing and maintaining charging infrastructure. As above, we outline what we might measure for each sub-category and suggest methods for measuring them.
+
+  * **Real-estate**: Determine the availability and cost to acquire land required to install the chargers. Here we could use parcel data, if available, to identify all parcels within an acceptable distance from a candidate site. And from these parcels, eliminate all that don't meet a minimum parcel size requirement and cost threshold. 
+
+  * **Linkage to power grid**: If the cost to link a new charger to existing power infrastructure is a factor of distance to existing infrastructure, we could simply measure the distance from each candidate site and the nearest qualifying sub-station. We could get more complex by evaluating the trade-offs of creating a new substation - and where, but that likely opens up a new set of complicated cost evaluations.  
+
+  * **Risk avoidance**: Here, we want to compute the likelihood that a charging facility might get damaged. For this, we'd need spatial data on the likelihood of a risk occurring and information of the severity of the risk. For example, we could use FEMA's flood risk data to estimate the return interval of flooding event at a candidate site, and favor sites that have a low likelihood of being damaged.
+
+    
+
+* **Cost offsets**: Same procedure as above
+
   * 
 
 ---
