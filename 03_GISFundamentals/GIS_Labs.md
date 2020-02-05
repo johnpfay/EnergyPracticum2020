@@ -1,20 +1,18 @@
 ---
-Title: GIS Overview
+Title: Analysis Overview
 Author: John Fay
 Data: Spring 2020
 ---
 
-> Outline of the analyses we'll pursue and the lessons required to pursue them.
 
-## 
 
-## Objective:
+## Objectives:
 
-Identify a set of locations to install new DCFC chargers in North Carolina that would best promote electric vehicle usage by reducing concerns/inconvenience of having to charge vehicles when driving to destinations across the state. 
+> Identify a set of locations to install new DCFC chargers in North Carolina that would best promote electric vehicle usage by reducing concerns/inconvenience of having to charge vehicles when driving to destinations across the state. 
 
 #### ♦ Factors that would reduce concern/inconvenience:
 
-Imagine you are considering purchasing an electric car. You are convinced it would be perfectly suitable for your daily commute to work, but you also enjoy your trips from Durham to Asheville and want to be supremely confident that the car you buy will handle that without any concerns. <u>What are the factors that would influence your decision?</u> 
+> Imagine you are considering purchasing an electric car. You are convinced it would be perfectly suitable for your daily commute to work, but you also enjoy your trips from Durham to Asheville and want to be supremely confident that the car you buy will handle that without any concerns. <u>What are the factors that would influence your decision?</u> 
 
 * **Range anxiety**: Can you even get to your destination without your battery running out between charges?
 * **Inconvenience**: Charging takes longer than filling a tank. You're ok with that as long as:
@@ -25,17 +23,57 @@ Imagine you are considering purchasing an electric car. You are convinced it wou
 
 #### ♦ Other factors that would influence where new DCFCs should be installed
 
-If the driver were the only concern, we'd just put new chargers at every mile. Of course, we have other constraints as well. First, we have some **physical limitations** on where we can put new chargers, and second we would want to minimize the overall **net cost** of installing new chargers. 
+> If the driver were the only concern, we'd just put new chargers at every mile. Of course, we have other constraints, namely cost; we want to minimize overall cost as much as possible. So now we must ask: <u>what factors affect the expense of setting up and maintaining statewide DCFC infrastructure</u>? 
 
-* **Cost to overcome physical limitations**: Not everywhere is a viable location for a new charger.
+* **Setup and maintenance costs**:
+
+  * [Set up] Real estate: Need to acquire land to install the charger
+  * [Set up] Linkage to existing power infrastructure
+
+  * [Maintenance] Risk avoidance: avoid flooding, other disasters
+
+* **Cost offsets**:
+
+  * [Direct] Visits/day: Charging fees paid by drivers
+  * [Indirect] Boost in local economies
+
+---
+
+## *Actionable* Objectives:
+
+> Now we must translate our above factors into ones we can measure (paying particular attention to those which use GIS)
+
+* **Range anxiety**: To alleviate range anxiety, we first need to identify gaps within the existing infrastructure's service area, and then we prioritize new charging locations based on how they effectively the eliminate those gaps. All this, of course, depends very much on the range of the car, so that will be a variable in whatever model we generate. 
+  * Map the service areas from existing DCFC locations (based on a given range.)
+  * Identify gaps within those service areas
+  * Find a set of candidate sites that eliminate all gaps with as few new chargers as possible. 
+* **Inconvenience**: Here we need proxy information that allows us to quantify levels of inconvenience for each candidate site. We'll break this down into the various categories. 
+  * **Distance from interstate**: How far would a driver have to deviate from the likely course? 
+  * **Origin-destination distances**: Among all popular origin-destination pairs (e.g. major cities in NC), which candidate sites reduce the overall distances (i.e. minimizes having to drive off course just to charge the car).
+  * **Safety**: eliminate candidate sites in "high crime" areas; rank other sites based on "crime likelihood"
+  * **Amenities**: eliminate candidate sites that have zero amenities; rank other sites based on number of amenities
+    * Amenities = restaurants or cafes for now, but can include other businesses later
+* **Setup and maintenance costs**: 
+  * **Real-estate**: 
+    * Identify lots within a set proximity of each candidate site
+    * Exclude lots not meeting size criteria
+    * Exclude sites that are too expensive (or rank on cost)
+  * **Linkage to power grid**: 
+    * Map substations
+    * Compute distances away from existing substations
+    * For each candidate site/lot assign ranking based on distance from substation
+  * **Risk avoidance**: 
+    * Exclude lots within a floodplain
+* **Cost offsets**
   * 
 
-We'd want to minimize over all cost by placing only as many chargers as needed to alleviate the above concerns. Furthermore, new charging locations are not
+---
 
-* Available space
-* 
-* Access to adequate power
-* Enough visits to justify construction
+## Framing the workflow
+
+!![map of North Carolina cities](https://geology.com/state-map/maps/north-carolina-road-map.gif))
+
+---
 
 
 
