@@ -1,0 +1,761 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Analysis Overview</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    text-indent: 0.0rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 10px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: Blue;
+    font-weight: 600;
+    padding: 0px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0px;
+	padding: 0px;
+},
+h4 {
+    margin-bottom: 0px;
+	padding: 0px;
+},
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+h2 a,
+h3 a {
+    color: #34495e;
+}
+
+h1 {
+    padding-bottom: .2rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin: 15px 0 15px;
+    border-bottom: 0px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+	padding-bottom: 0px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+    padding: 10px 15px;
+    color: #777;
+    background-color: rgba(66, 185, 131, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0 1px;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+.md-toc-h1 {
+  display: none;
+}
+.md-toc-h4 {
+  display: none;
+}
+.md-toc-h5 {
+  display: none;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#1-original-objective">1. Original Objective:</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n6"><a class="md-toc-inner" href="#2-refined-objective">2. Refined Objective:</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n17"><a class="md-toc-inner" href="#3-further-refinements">3. Further Refinements:</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n19"><a class="md-toc-inner" href="#♦-factors-that-would-reduce-concerninconvenience">♦ Factors that would reduce concern/inconvenience:</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n36"><a class="md-toc-inner" href="#♦-other-factors-that-would-influence-where-new-dcfcs-should-be-installed">♦ Other factors that would influence where new DCFCs should be installed</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n59"><a class="md-toc-inner" href="#4-translate-into-actionable-objectives">4. Translate into <em>Actionable</em> Objectives:</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n106"><a class="md-toc-inner" href="#5-framing-the-workflow">5. Framing the workflow</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n109"><a class="md-toc-inner" href="#defining-our-candidate-sites">Defining our "candidate sites"</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n115"><a class="md-toc-inner" href="#defining-origin-destination-pairs">Defining "origin-destination pairs"</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n124"><a class="md-toc-inner" href="#outlining-specific-tasks">Outlining specific tasks</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#6-analyses-well-tackle">6. Analyses we'll tackle</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n131"><a class="md-toc-inner" href="#a-create-a-spatial-dataset-of-our-candidate-sites">A. Create a spatial dataset of our candidate sites</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n136"><a class="md-toc-inner" href="#b-characterize-candidate-sites-by-their-surroundings-safety--amenities-maintenance-costs">B. Characterize candidate sites by their surroundings (Safety &amp; Amenities, Maintenance costs) </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n149"><a class="md-toc-inner" href="#c-identify-which-candidate-sites-supply-gaps-in-existing-dcfc-coverage-range-anxiety">C. Identify which candidate sites supply gaps in existing DCFC coverage (Range anxiety)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n164"><a class="md-toc-inner" href="#d-compute-which-sets-of-candidate-sites-would-enhance-connectivity-range-anxiety-route-diversions-wait-times-cost-offsets">D. Compute which <em>sets</em> of candidate sites would enhance connectivity (Range anxiety, Route diversions, Wait times, Cost offsets)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n180"><a class="md-toc-inner" href="#e-synthesize-results">E. Synthesize results</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n184"><a class="md-toc-inner" href="#summary---so-far">Summary - so far...</a></span></p></div><h2><a name="1-original-objective" class="md-header-anchor"></a><span>1. Original Objective:</span></h2><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Design an optimal plugin electric vehicle (PEV) charging network for North Carolina..."</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 17px;"></div><div class="CodeMirror-gutters" style="display: none; height: 17px;"></div></div></div></pre><p>&nbsp;</p><h2><a name="2-refined-objective" class="md-header-anchor"></a><span>2. Refined Objective:</span></h2><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">"Identify a set of locations to install new DCFC chargers in North Carolina that would best promote electric vehicle adoption by reducing concerns/inconvenience of having to charge vehicles when driving to destinations across the state."</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 34px;"></div><div class="CodeMirror-gutters" style="display: none; height: 34px;"></div></div></div></pre><p><strong><em><span>Note the refinements I made from our original objective:</span></em></strong></p><ul><li><code>plugin electric vehicle network</code><span> → </span><code>set of locations to install new DCFC chargers</code></li><li><code>optimal</code><span> → </span><code>would best promote electric vehicle adoption by reducing  concerns...</code></li><li><code>best</code><span> is still a bit vague; </span><u><span>what might be an effective replacement?</span></u></li></ul><p>&nbsp;</p><h2><a name="3-further-refinements" class="md-header-anchor"></a><span>3. Further Refinements:</span></h2><p><span>With our objective refined, we now need to elaborate on the details and parse out what we really mean by the exceedingly vague terms that still remain. </span></p><h4><a name="♦-factors-that-would-reduce-concerninconvenience" class="md-header-anchor"></a><span>♦ Factors that would reduce concern/inconvenience:</span></h4><blockquote><p><span>Imagine you are considering purchasing an electric car. You are convinced it would be perfectly suitable for your daily commute to work, but you also enjoy your trips from Durham to Asheville and want to be supremely confident that the car you buy will handle that without any concerns. </span><u><span>What are the factors that would influence your decision?</span></u><span> </span></p></blockquote><ul><li><p><strong><span>Range anxiety</span></strong><span>: Can you even get to your destination without your battery running out between charges?</span></p></li><li><p><strong><span>Inconvenience</span></strong><span>: Charging takes longer than filling a tank. You&#39;re ok with that as long as:</span></p><ul><li><span>Getting to the charging location does not take you too far off your shortest route</span></li><li><span>The wait won&#39;t be any longer than necessary (wait time)</span></li><li><span>You feel comfortable at the charging location (safety)</span></li><li><span>The time spent at the charger doesn&#39;t seem &quot;wasted&quot; (amenities)</span></li></ul></li></ul><h4><a name="♦-other-factors-that-would-influence-where-new-dcfcs-should-be-installed" class="md-header-anchor"></a><span>♦ Other factors that would influence where new DCFCs should be installed</span></h4><blockquote><p><span>If the driver were the only concern, we&#39;d just put new chargers at every mile. Of course, we have other constraints, namely cost; we want to minimize overall cost as much as possible. So now we must ask: </span><u><span>what factors affect the expense of setting up and maintaining statewide DCFC infrastructure</span></u><span>? </span></p></blockquote><ul><li><p><strong><span>Setup and maintenance costs</span></strong><span>:</span></p><ul><li><span>[Set up] Real estate: Need to acquire land to install the charger</span></li><li><span>[Set up] Linkage to existing power infrastructure</span></li><li><span>[Maintenance] Risk avoidance: avoid flooding, vandalism, other potentially damaging events</span></li></ul></li><li><p><strong><span>Cost offsets</span></strong><span>:</span></p><ul><li><span>[Direct] Visits/day: Charging fees paid by drivers</span></li><li><span>[Indirect] Economic incentives</span></li><li><span>[Indirect] Air quality improvements, other environmental offsets</span></li></ul></li></ul><p>&nbsp;</p><h2><a name="4-translate-into-actionable-objectives" class="md-header-anchor"></a><span>4. Translate into </span><em><span>Actionable</span></em><span> Objectives:</span></h2><p><span>We are getting closer to something we can act on. But before we can proceed with any analysis, we must translate our above factors into </span><u><span>metrics we can measure</span></u><span> (paying particular attention to those which use GIS), and perhaps suggest the means for measuring them. Below, we dig a bit deeper into each of the factors, getting to a point where we can envision the analysis required to realize our objectives.</span></p><ul><li><p><strong><span>Range anxiety</span></strong><span>: </span>
+<span>To alleviate range anxiety, we first need to identify gaps within the existing infrastructure&#39;s service area, and then we prioritize new charging locations based on how they effectively the eliminate those gaps. All this, of course, depends very much on the range of the car, so that will be a variable in whatever model we generate. </span></p><ul><li><span>Map the service areas from existing DCFC locations (based on a given range.)</span></li><li><span>Identify gaps within those service areas</span></li><li><span>Find a set of candidate sites that eliminate all gaps with as few new chargers as possible.</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><strong><span>Inconvenience</span></strong><span>:</span>
+<span>Here we need proxy information that allows us to quantify levels of inconvenience for each candidate site. We&#39;ll break this down into the various categories we mention above. And for each category, we outline what we might measure and how, in general terms, we might measure it.</span></p><ul><li><strong><span>Deviation from the shortest route</span></strong><span>: Given a set of origin-destination pairs, how much longer would an electric vehicle have to travel just to ensure proper charging? What configuration of new chargers would reduce travel time the most? </span></li><li><strong><span>Avoiding excessive charging wait time</span></strong><span>: Given current/projected traffic patterns and existing DCFC locations (or existing data on wait times at current charger locations), where might new chargers lower average wait times between origin-destination pairs? We might measure this using &quot;betweenness-centrality&quot;, a graph theory measure of how frequently a site appears in the shortest path between origin-destination pairs - kind of like a how frequently a single stepping stone gets used as you cross a stream. From that we could add a site and determine how much it decreases overall betweenness scores. </span></li><li><strong><span>Safety at charging locations</span></strong><span>: Map out locations/conditions where security is a concern, perhaps using crime map data, lights and night data, or other viable proxies. Exclude candidate sites that fall within areas of &quot;security concern&quot; based on some threshold values in the datasets used. </span></li><li><strong><span>Amenities at charging locations</span></strong><span>: Map out all locations that might provide a reasonable distraction while waiting to charge (e.g., restaurants). Compute either a density map of these locations or a map showing areas within minimum distance to a set of these locations, and exclude candidate sites that fall outside acceptable ranges of these values. </span></li></ul><p>&nbsp;</p></li><li><p><strong><span>Setup and maintenance costs</span></strong><span>: </span>
+<span>Again, we must find proxy information that allows us to quantify values. Here, the values relate to the cost of installing and maintaining charging infrastructure. As above, we outline what we might measure for each sub-category and suggest methods for measuring them.</span></p><ul><li><p><strong><span>Real-estate</span></strong><span>: Determine the availability and cost to acquire land required to install the chargers. Here we could use parcel data, if available, to identify all parcels within an acceptable distance from a candidate site. And from these parcels, eliminate all that don&#39;t meet a minimum parcel size requirement and cost threshold. </span></p></li><li><p><strong><span>Linkage to power grid</span></strong><span>: If the cost to link a new charger to existing power infrastructure is a factor of distance to existing infrastructure, we could simply measure the distance from each candidate site and the nearest qualifying sub-station. We could get more complex by evaluating the trade-offs of creating a new substation - and where, but that likely opens up a new set of complicated cost evaluations.  </span></p></li><li><p><strong><span>Risk avoidance</span></strong><span>: Here, we want to compute the likelihood that a charging facility might get damaged. For this, we&#39;d need spatial data on the likelihood of a risk occurring and information of the severity of the risk. For example, we could use FEMA&#39;s flood risk data to estimate the return interval of flooding event at a candidate site, and favor sites that have a low likelihood of being damaged.</span></p><p>&nbsp;</p></li></ul></li><li><p><strong><span>Cost offsets</span></strong><span>: </span>
+<span>Same procedure as above...</span></p><ul><li><p><strong><span>Visits per day</span></strong><span>: We might estimate the number of visits per day using traffic data, if available, adjusted by an estimate of the number of those cars being electric cars, further adjusted by an estimate of the number of those electric cars needing to be charged. The last estimate may be a factor of the distance of a candidate site from existing infrastructure, favoring those that occur beyond a minimum distance from the nearest facility, thus increasing likelihood that a car must visit. </span></p><p><span>Alternatively, we could use the betweenness-centrality score mentioned above, favoring sites that have high scores. </span></p></li><li><p><strong><span>Boost in local economies</span></strong><span>: Here we favor candidate sites where the local economies could benefit from dollars spent by people while they charge their car. To measure potential boosts, we could examine the demographics surrounding each candidate site, using either US Census data or ESRI&#39;s Enrichment data.</span></p></li><li><p><strong><span>Environmental offsets</span></strong><span>: Installation of a new charger facility may promote more local EV sales and use, and thus possibly reduce air emissions or perhaps even water quality (by reducing ICE vehicle residues on roads that drain into streams). Thus we could favor candidate sites that either have existing environmental issues or that are particularly sensitive to air/water pollution. </span></p></li></ul></li></ul><p>&nbsp;</p><h2><a name="5-framing-the-workflow" class="md-header-anchor"></a><span>5. Framing the workflow</span></h2><p><span>What we have above is something akin to a blueprint: we want a wall here, a window there, a hallway from here to here. However, it doesn&#39;t include where to start or in what sequence to build things. The next step then is to &quot;frame the workflow&quot; meaning develop logical steps to set up and execute our analyses. This can be a somewhat iterative process that benefits from experience, but that likely needs adapting as you flesh out the plan. </span></p><p><span>First, in the above </span><em><span>actionable objectives</span></em><span> section, I alluded to two terms that require further explanation: &quot;</span><code>candidate sites</code><span>&quot; and &quot;</span><code>origin-destination pairs</code><span>&quot;. So let&#39;s discuss those. </span></p><h4><a name="defining-our-candidate-sites" class="md-header-anchor"></a><span>Defining our &quot;candidate sites&quot;</span></h4><p><span>In dealing with optimization questions, which is what we are doing here, finding a solution is much easier when you can restrict the set of options you are evaluating. For instance, it&#39;s quite possible that if we were looking at just two or even a dozen potential locations to place new chargers, we might very well be able to do that without GIS or fancy computers. However, if every square meter in NC was being considered as a potential charging location, the problem gets far more complex and intensive: &quot;Do things improve we we move this site to the east 2 meters?&quot; &quot;What if we place two sites 3 meters apart or three sites 2 meters apart?&quot; What this boils down to that </span><strong><span>we must first decide on the finite set of elements that we can add or substract from ultimate &quot;optimized&quot; solution</span></strong><span>, or what I&#39;ve been calling our </span><code>candidate sites</code><span>.  </span></p><p><span>We can devise these sites using one of two methods, both of which involve deciding on a reasonable number so as to adequately address the problem, but not to overcomplicate the analysis. One method is to identify a reasonable initial set of locations. This is what MJ Bradley and Associates did with their project that uses all interstate exits as potential charging locations, which seems quite a reasonable starting point given the overall problem. The other method is to divide the state into regularly spaced (aka &quot;tesselated&quot;) areas, often squares, sometimes hexagons of an appropriate size (not too small as to bog down the analysis, not too big as to make the results meaningless). </span></p><p><span>Each approach has its advantages and disadvantages. Using the points allows us to pinpoint and evaluate precise locations, but it allows the possibility we may miss some potential locations. Using the tessellated areas has inexact locational awareness, but it considers all possible locations. Which to choose??</span></p><p><strong><span>I propose that we use the MJ Bradley approach and use exits as our candidate site locations</span></strong><span>. In our case, they just make good sense in that we are looking at interstates, it&#39;d likely incur quite a bit of costs to build new off-ramp just for a new charging facility, and the number of exits seems to be a large, but reasonable number to prioritize using GIS. </span></p><p><span>With those defined, our workflow starts to take shape: for each of these exits, we need to build a table that has values/scores for each of the metrics we describe in the </span><em><span>Actionable Objectives</span></em><span> section. And from that table, we devise a scoring system that will reveal which candidate sites should become charging stations based on specific goals. </span></p><h4><a name="defining-origin-destination-pairs" class="md-header-anchor"></a><span>Defining &quot;origin-destination pairs&quot;</span></h4><p><span>The other term mentioned in the </span><em><span>Actionable Objectives</span></em><span> section above that needs further defining is &quot;origin-destination pairs&quot;, and this too is involved in simplifying some analyses we might tackle, specifically ones involving graph theory and network analysis. </span></p><blockquote><p><span>Briefly, &quot;graph theory&quot; examines the spatial (not necessarily geographic) relationships among features via connections. A </span><strong><span>graph</span></strong><span> is simply a set of nodes (or points) and edges (or connector between points). You can think of it as all the major cities in North Carolina (the points) connected by the road network between them (the edges). Once we&#39;ve created a graph, graph theory allows us to compute all kinds of interesting things - far more than I&#39;ll discuss here just yet, but it will become quite useful.</span></p></blockquote><p><span>In an example provided early in this document, I mentioned looking at the route from Durham to Asheville to see whether that was do-able given a vehicle of limited range. We could do determine that, but it&#39;d just be one route, one </span><strong><span>origin-destination pair</span></strong><span>. If we added another origin-destination pair, new information would appear, namely segments that occur along multiple routes. Keep adding more origin-destination pairs, and we get more information. However, as was the case with candidate sites, if we add to many, our computation slows down dramatically; we need to find a representative set of origins and destinations that finds that sweet spot between giving us useful information and still allowing us to complete our analyses in a reasonable amount of time.  </span></p><p><span>What I recommend we select is to construct a list of all the major cities in North Carolina, maybe the top 10 or maybe 20 listed in Wikipedia (</span><a href='https://en.wikipedia.org/wiki/List_of_municipalities_in_North_Carolina#top'><span>source</span></a><span>) and use those as the </span><strong><span>nodes</span></strong><span> on our graph. We may also want to include points where the major interstates enter/leave North Carolina. The </span><strong><span>edges</span></strong><span> will be a street network dataset that we can obtain. And using those we can model travel among those various origin-destination routes, which will be explained a bit more later. </span></p><blockquote><p><img src="https://geology.com/state-map/maps/north-carolina-road-map.gif" referrerpolicy="no-referrer"><span>)</span></p></blockquote><p>&nbsp;</p><h4><a name="outlining-specific-tasks" class="md-header-anchor"></a><span>Outlining specific tasks</span></h4><p><span>Defining our the candidate sites and to some extent our origin-destination pairs, we&#39;ve constrained our analysis to be something a bit more manageable. The next step is to identify the actual analytical steps required to generate the products we&#39;ve identified above and establish a logical order for tackling them, often from simple to complex. This process also benefits from experience, and so I&#39;ll guide this process below. It&#39;s worth noting, however, that this is still just a </span><em><span>plan</span></em><span> and plans likely change, needing to adapt to oversights and other unexpected obstacles. But we can only deal with those as they arise. </span></p><p>&nbsp;</p><blockquote><p><span>I&#39;ve outlined these analyses in a separate section for clarity. Also, I&#39;ve tweaked these a bit to reflect the fact that we are also learning GIS as we go. </span></p></blockquote><p>&nbsp;</p><h2><a name="6-analyses-well-tackle" class="md-header-anchor"></a><span>6. Analyses we&#39;ll tackle</span></h2><h4><a name="a-create-a-spatial-dataset-of-our-candidate-sites" class="md-header-anchor"></a><span>A. Create a spatial dataset of our candidate sites</span></h4><ul><li><span>Convert a CSV format table of interstate exits, including their geographic coordinates (lat/long), into geometric objects stored in a GeoPandas dataframe. Project to the NC State Plane coordinate system and save as a shapefile. This file can be read in to further scripts and used in geospatial analysis and to build the prioritization database.</span></li></ul><p>&nbsp;</p><h4><a name="b-characterize-candidate-sites-by-their-surroundings-safety--amenities-maintenance-costs" class="md-header-anchor"></a><span>B. Characterize candidate sites by their surroundings (Safety &amp; Amenities, Maintenance costs) </span></h4><ul><li><span>Identify data that would reflect </span><strong><span>safety</span></strong><span>|</span><strong><span>amenities</span></strong><span> at a charging location; summarize those values for each candidate site.</span></li><li><span>Determine typical </span><strong><span>traffic loads</span></strong><span> at each candidate sites.</span></li><li><span>Identify which sites fall within high </span><strong><span>flood plain risk</span></strong><span> areas.</span></li><li><span>Compute distances to nearest power substation for each candidate site.</span></li><li><span>Add these values to the candidate sites&#39; attribute table for later scoring/ranking.</span></li></ul><p>&nbsp;</p><h4><a name="c-identify-which-candidate-sites-supply-gaps-in-existing-dcfc-coverage-range-anxiety" class="md-header-anchor"></a><span>C. Identify which candidate sites supply gaps in existing DCFC coverage (Range anxiety)</span></h4><ul><li><span>Use Python packages to extract charging locations from NREL via its API. Convert these to geographic objects and save as a feature class. </span></li><li><span>Compute service areas from these existing chargers for typical PEV ranges (100|250|300 miles).</span></li><li><span>Identify which candidate sites occur outside of identified service areas; add that information to its attribute table.</span></li></ul><p><span>→ </span><strong><em><span>Alternatively:</span></em></strong></p><ul><li><span>Compute the distance (Euclidean, driving) between each candidate site and the nearest DCFC charger.  </span></li><li><span>Compute the number of DFCF chargers within a given distance. </span></li></ul><p>&nbsp;</p><h4><a name="d-compute-which-sets-of-candidate-sites-would-enhance-connectivity-range-anxiety-route-diversions-wait-times-cost-offsets" class="md-header-anchor"></a><span>D. Compute which </span><em><span>sets</span></em><span> of candidate sites would enhance connectivity (Range anxiety, Route diversions, Wait times, Cost offsets)</span></h4><ul><li><p><span>Construct a graph of all existing DCFC and candidate sites (nodes) and the driving distances between them (edges). </span></p></li><li><p><span>Eliminate all edges above a threshold driving distance.</span></p></li><li><p><span>For each candidate site, use graph analysis to compute:</span></p><ul><li><u><span>Degree-centrality</span></u><span> (# of connections): higher values suggest more traffic.</span></li><li><u><span>Betweenness-centrality</span></u><span> (frequency in routes among pairs): higher values suggest importance as a stepping stone.</span></li><li><u><span>Closeness-centrality</span></u><span> (average nearest neighbor distance): find those not too close, nor too far...</span></li></ul></li></ul><p>&nbsp;</p><h4><a name="e-synthesize-results" class="md-header-anchor"></a><span>E. Synthesize results</span></h4><p><span>The result of the above analyses will be a new set of attributes for each candidate site. As MJ Bradley as done, a final ranking of candidate sites is generated by weighting each factor according to some logical framework (and there can be several scenarios), and identifying those sites rise to the top of the rankings. </span></p><p>&nbsp;</p><hr /><h2><a name="summary---so-far" class="md-header-anchor"></a><span>Summary - so far...</span></h2><p><span>While this document certainly doesn&#39;t flesh out everything, it does allow us to focus in on some tangible tasks we can use to start learning GIS and the other foundations for analysis. It will also likely be the source of more discussion and more refinement.</span></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

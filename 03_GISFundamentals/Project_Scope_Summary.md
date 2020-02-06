@@ -1,10 +1,10 @@
 ---
 Title: Analysis Overview
 Author: John Fay
-Data: Spring 2020
+Date: Spring 2020
 ---
 
-
+[toc]
 
 ## 1. Original Objective:
 
@@ -136,76 +136,76 @@ In an example provided early in this document, I mentioned looking at the route 
 
 What I recommend we select is to construct a list of all the major cities in North Carolina, maybe the top 10 or maybe 20 listed in Wikipedia ([source](https://en.wikipedia.org/wiki/List_of_municipalities_in_North_Carolina#top)) and use those as the **nodes** on our graph. We may also want to include points where the major interstates enter/leave North Carolina. The **edges** will be a street network dataset that we can obtain. And using those we can model travel among those various origin-destination routes, which will be explained a bit more later. 
 
+> ![](https://geology.com/state-map/maps/north-carolina-road-map.gif))
 
 
-!![map of North Carolina cities](https://geology.com/state-map/maps/north-carolina-road-map.gif))
+
+#### Outlining specific tasks
+
+Defining our the candidate sites and to some extent our origin-destination pairs, we've constrained our analysis to be something a bit more manageable. The next step is to identify the actual analytical steps required to generate the products we've identified above and establish a logical order for tackling them, often from simple to complex. This process also benefits from experience, and so I'll guide this process below. It's worth noting, however, that this is still just a *plan* and plans likely change, needing to adapt to oversights and other unexpected obstacles. But we can only deal with those as they arise. 
+
+
+
+> I've outlined these analyses in a separate section for clarity. Also, I've tweaked these a bit to reflect the fact that we are also learning GIS as we go. 
 
 
 
 ## 6. Analyses we'll tackle
 
-And finally, I now outline the geospatial analyses that we'll tackle, including the GIS techniques involved. 
+#### A. Create a spatial dataset of our candidate sites
 
-#### 1. Create a map of our candidate sites
-
-* Convert a CSV format table of interstate exits, including their geographic coordinates (lat/long), into geometric objects stored in a GeoPandas dataframe. Project to the NC State Plane coordinate system and save as a shapefile. 
+* Convert a CSV format table of interstate exits, including their geographic coordinates (lat/long), into geometric objects stored in a GeoPandas dataframe. Project to the NC State Plane coordinate system and save as a shapefile. This file can be read in to further scripts and used in geospatial analysis and to build the prioritization database.
 
 
 
-#### 2. Map DC Fast Charger (DCFC) locations across NC
+#### B. Characterize candidate sites by their surroundings (Safety & Amenities, Maintenance costs) 
 
-* Locate data - table
-  * Reading CSV data into a Pandas dataframe
-  * Using APIs to gather data
-* Plot/map data
-  * DataFrames and Pandas 
-  * Geometric objects & Shapely
-  * GeoDataframes and GeoPandas
-* Exercise: Tesla locations
+* Identify data that would reflect **safety**|**amenities** at a charging location; summarize those values for each candidate site.
+* Determine typical **traffic loads** at each candidate sites.
+* Identify which sites fall within high **flood plain risk** areas.
+* Compute distances to nearest power substation for each candidate site.
+* Add these values to the candidate sites' attribute table for later scoring/ranking.
 
 
 
-#### 2. Design our candidate sites to prioritize
+#### C. Identify which candidate sites supply gaps in existing DCFC coverage (Range anxiety)
 
-* Point: Exits
-* Polygons: Grid mesh
+* Use Python packages to extract charging locations from NREL via its API. Convert these to geographic objects and save as a feature class. 
+* Compute service areas from these existing chargers for typical PEV ranges (100|250|300 miles).
+* Identify which candidate sites occur outside of identified service areas; add that information to its attribute table.
+
+→ ***Alternatively:***
+
+* Compute the distance (Euclidean, driving) between each candidate site and the nearest DCFC charger.  
+* Compute the number of DFCF chargers within a given distance. 
 
 
 
-### Identify areas meeting criteria
+#### D. Compute which *sets* of candidate sites would enhance connectivity (Range anxiety, Route diversions, Wait times, Cost offsets)
 
-* 
+* Construct a graph of all existing DCFC and candidate sites (nodes) and the driving distances between them (edges). 
+* Eliminate all edges above a threshold driving distance.
+* For each candidate site, use graph analysis to compute:
+  * <u>Degree-centrality</u> (# of connections): higher values suggest more traffic.
+  * <u>Betweenness-centrality</u> (frequency in routes among pairs): higher values suggest importance as a stepping stone.
+  * <u>Closeness-centrality</u> (average nearest neighbor distance): find those not too close, nor too far...
 
-* Extract census data near DCFC locations across NC
-  * Census data
-  * Reading shapefiles into GeoDataframes
-  * Coordinate reference systems
-  * Projecting data
-  * Spatial analyses: buffer
-  * Spatial analyses: select
-* Network analyses: driving distances 
+
+
+#### E. Synthesize results
+
+The result of the above analyses will be a new set of attributes for each candidate site. As MJ Bradley as done, a final ranking of candidate sites is generated by weighting each factor according to some logical framework (and there can be several scenarios), and identifying those sites rise to the top of the rankings. 
 
 
 
 ---
 
-## Task: Mapping existing DCFC points
+## Summary - so far...
 
-* XY to Shapely Point
-* Shapefile to GeoDataframe
-* Create GeoDataFrame from shapely objects
+While this document certainly doesn't flesh out everything, it does allow us to focus in on some tangible tasks we can use to start learning GIS and the other foundations for analysis. It will also likely be the source of more discussion and more refinement.
 
 
 
-## Task: Finding services within 3 miles of existing DCFC
-
-* 
 
 
-
-## Task: Identifying gaps in existing network
-
-
-
-## Task: Identifying hot spots for placing a charger
 

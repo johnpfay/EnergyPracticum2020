@@ -28,7 +28,7 @@ We'll be running our Python commands in Jupyter notebooks hosted on Duke's Virtu
 
    > If successful, you'll see the Jupyter Dashboard- a sort of file manager where you can create, open, rename, delete, etc. files. 
    >
-   > <img src="/media/Jupyter_dashboard.png" alt="Jupter dashboard" style="zoom:67%;" />
+   > <img src="./media/Jupyter_dashboard.png" alt="Jupyter dashboard" style="zoom:67%;" />
 
 
 
