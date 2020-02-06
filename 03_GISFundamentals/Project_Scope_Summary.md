@@ -4,6 +4,10 @@ Author: John Fay
 Date: Spring 2020
 ---
 
+# Project Scope Summary
+
+*→ A summary of where we are so far and where we might go from here...*
+
 [toc]
 
 ## 1. Original Objective:
