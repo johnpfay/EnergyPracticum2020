@@ -6,7 +6,7 @@ Data: Spring 2020
 
 # GIS Practicum (Energy): *"Learning GIS - an Overview"*
 
-Fresh off our first exposure to Python, we now drill into how Python can be used to perform spatial analysis. We again leverage materials from an excellent resource, namely the [University of Helsinki's Automating GIS Processes tutorial](https://automating-gis-processes.github.io/site/index.html). Here I outline how we will adapt those materials to our own learning objectives. 
+> Fresh off our first exposure to Python, we now drill into how Python can be used to perform spatial analysis. We again leverage materials from an excellent resource, namely the [University of Helsinki's Automating GIS Processes tutorial](https://automating-gis-processes.github.io/site/index.html). Here I outline how we will adapt those materials to our own learning objectives. 
 
 
 
@@ -23,48 +23,47 @@ This should bring you to your Jupyter dashboard, listing all your existing Jupyt
 
 ## Course materials
 
-Rather than upload Jupyter notebook files individually, we will pull a set of lesson notebooks into our remote environment using **Git** and **GitHub**. Instructions for doing that are listed below. This will allow you to retain your work as well as start using Git/GitHub, which is quite useful if continue on in the coding world.
+> Rather than upload Jupyter notebook files individually, we will pull a set of lesson notebooks into our remote environment using **Git** and **GitHub**. Instructions for doing that are listed below. This will allow you to retain your work as well as start using Git/GitHub, which is quite useful if continue on in the coding world.
 
-### Setting up GitHub and Git; how it works
+### Setting up GitHub and Git: How it works
 
-1. **"Forking" the class *PythonGIS* repository to your own account**
+#### 1. "Forking" the class *PythonGIS* repository to your own account
 
-   * Log in to your personal GitHub account. If you don't yet have a GitHub account, navigate to https://github.com and create one. 
+> Forking a GitHub repository makes a copy of that repository in your own GitHub account. However, this copy retains a link to the original, or "upstream" repository such that if it changes, you can update your copy to include those changes. Otherwise, your "forked" repository will only track and store changes that you yourself make to files in that "forked repository".
+>
+> Here we will fork the main `PythonGIS` repository located within the `DataDevils` GitHub account. 
 
-   * Navigate to https://github.com/DataDevils/PythonGIS and click the `Fork` button. This makes a copy of the class materials, stored in your personal GitHub repository. The browser should refresh to take you to the repository web page on your GitHub account. 
+* Log in to your personal GitHub account. If you don't yet have a GitHub account, navigate to https://github.com and create one. 
+* Navigate to https://github.com/DataDevils/PythonGIS and click the `Fork` button. This makes a copy of the class materials, stored in your personal GitHub repository. The browser should refresh to take you to the repository web page on your GitHub account. 
 
-2. **Setting up your Jupyter environment for using Git**
 
-   * Navigate back to your Jupyter dashboard. From the `New ▼` dropdown menu, select `Terminal` .
 
-   * At this terminal, we'll type commands to link our GitHub account with our ENV859 virtual environment. At the prompt, type the following commands ==replacing `my_user_name` with your own GitHub username and `me@email.com` with the email associated with your GitHub account==.
+#### 2. Setting up your Jupyter environment for using Git
 
-     ```bash
-     git config --global user.name my_user_name
-     git config --global user.email me@email.com
-     ```
+* Navigate back to your Jupyter dashboard. From the `New ▼` dropdown menu, select `Terminal` .
 
-3. **"Cloning" your *PythonGIS* repository to your ENVIRON859 environment**
+* At this terminal, we'll type commands to link our GitHub account with our ENV859 virtual environment. At the prompt, type the following commands ==replacing `my_user_name` with your own GitHub username and `me@email.com` with the email associated with your GitHub account==.
 
-   * First you need to copy the URL associated with your forked GitHub repository, e.g. "https://github.com/johnpfay/PythonGIS"
+  ```bash
+  git config --global user.name my_user_name
+  git config --global user.email me@email.com
+  ```
 
-   * Then, back in the terminal window, type the following command - ==using the URL associated with your repository==.
 
-     ```bash
-     git clone https://github.com/johnpfay/PythonGIS
-     ```
 
-   * If you navigate back to your Jupyter dashboard, you should see a new folder appear called "PythonGIS". 
+#### 3. "Cloning" your *PythonGIS* repository to your ENVIRON859 environment**
 
-4. Linking your forked repository with it's "upstream" counterpart, i.e. the repository from which it was forked.
+* First you need to copy the URL associated with your forked GitHub repository, e.g. "https://github.com/johnpfay/PythonGIS"
 
-   * Type the following command:
+* Then, back in the terminal window, type the following command - ==using the URL associated with your repository==.
 
-     ```bash
-     git remote add upstream https://github.com/DataDevils/PythonGIS
-     ```
+  ```bash
+  git clone https://github.com/<your_github_username/PythonGIS
+  ```
 
-5. **"Staging", "committing" and "pushing" changes to files in your repository**
+* If you navigate back to your Jupyter dashboard, you should see a new folder appear called "PythonGIS". 
+
+1. **"Staging", "committing" and "pushing" changes to files in your repository**
 
    * Edit your **README.md** file by opening it via your Jupyter dashboard and adding your name and the date at the bottom. Save and close the file. 
 
@@ -128,6 +127,7 @@ Rather than upload Jupyter notebook files individually, we will pull a set of le
      It may take some time to get comfortable with Git and GitHub, but it's a useful tool to learn. Our use of Git & GitHub will only use a small portion of its overall capability, but I will allude to other useful features as the class progresses. For now, we've used it primarily to get a copy of the materials we'll use to learn Python & GIS, and we'll review steps to maintain this repository later. 
 
      For more information on Git and GitHub refer to this page: https://geo-python.github.io/site/lessons/L2/git-basics.html
+
 
 
 
