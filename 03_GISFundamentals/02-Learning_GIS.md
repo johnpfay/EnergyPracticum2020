@@ -170,6 +170,10 @@ With our material now copied to our ENVIRON859 environment, we'll now embark on 
 
 
 
+---
 
+## What's next?
+
+From here we'll go through select lessons, cherry picking a bit those that have direct utility to our objectives. 
 
 
