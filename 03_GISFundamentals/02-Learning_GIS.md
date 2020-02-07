@@ -67,12 +67,16 @@ This should bring you to your Jupyter dashboard, listing all your existing Jupyt
 
 > We now have a clone of our remote GitHub repository on our local (virtual) machine. This cloned repository is equipped with all the necessary infrastructure to track changes in any of the files contained within it. This allows us to identify and roll back any edits that we want. Next, we'll look at how this is done. Below is a schematic that might be helpful as we work through the process.
 >
+> 
+>
 > ![GitHub Diagram](.\media\GitDiagram.jpg)
 >
+> 
+>
 > 1. **Making Changes**: When we add a new or modify an existing file, the state of our repository has changed and Git is aware of that change (unless we have expressly told Git to ignore a specific file via a `.gitignore` file. )
-> 2. If we want Git to record those changes in it's ledger, we first have to "Stage" those changes, done using the `git add` command. This places the file in the "`Staging Area`". This means that the modified file is in the active bundle of files that will be tracked in the current session. 
-> 3. At the end of an editing session and added all the files we want to track to the staging area, the next step is to bundle those changes as a single update, or "commit" to our repository. This is done with the `git commit` command and is accompanied with a brief message related to the changes made. (This message allows us to identify the change in case we want to roll it back...)
-> 4. At this point, our local repository is updated with the changes logged in the repository's ledger. But all this is still just on the virtual machine. To upload these changes to our remote GitHub repository, we `push` those changes up. Once that's done, they are stored in the cloud and we can `pull` those changes to any other clones of the repository...
+> 2. **Staging Changes**: If we want Git to record those changes in it's ledger, we first have to "Stage" those changes, done using the `git add` command. This places the file in the "`Staging Area`". This means that the modified file is in the active bundle of files that will be tracked in the current session. 
+> 3. **Committing changes**: At the end of an editing session and added all the files we want to track to the staging area, the next step is to bundle those changes as a single update, or "commit" to our repository. This is done with the `git commit` command and is accompanied with a brief message related to the changes made. (This message allows us to identify the change in case we want to roll it back...)
+> 4. **Pushing changes**: At this point, our local repository is updated with the changes logged in the repository's ledger. But all this is still just on the virtual machine. To upload these changes to our remote GitHub repository, we `push` those changes up. Once that's done, they are stored in the cloud and we can `pull` those changes to any other clones of the repository...
 >
 > This can all be quite much at first glance, so let's run through the process.
 
