@@ -10,7 +10,7 @@ Data: Spring 2020
 
 In this exercise we'll introduce ourselves to ArcGIS Pro - the industry standard GIS application - and use it to explore various spatial datasets that might be useful in our analysis. In addition to a quick tour of the ArcGIS Pro (or "ArcPro") software, we'll cover topics such as creating a proper workspace structure for GIS analyses, the various types and formats of spatial data, and tips for finding, acquiring, and managing spatial datasets. 
 
-For this exercise, we'll use NSOE lab machines with our class drives mapped. (Recall the [login.bat](./login.bat) script we created...) 
+→ For this exercise, we'll use NSOE lab machines with our class drives mapped. (Recall the [login.bat](./login.bat) script we created...) 
 
 I realize we'll be packing in a lot, so don't worry if some key points don't lodge in your head the first time hearing them. My intentions are to record this lesson so that you can go back to the class recording and review anything you want. 
 
@@ -99,10 +99,11 @@ We'll now grab some datasets to view in ArcGIS Pro. We'll start with those menti
 
 #### ♦ Homeland Infrastructure Foundation-Level Data
 
-	* Navigate to: https://hifld-geoplatform.opendata.arcgis.com/
+* Navigate to: https://hifld-geoplatform.opendata.arcgis.com/
+
  * Search for data that might be relevant:
    	* Note you can filter the results, e.g. Content type = "Feature Layer"
-   	* Did you find [Transmission Lines](https://hifld-geoplatform.opendata.arcgis.com/datasets/electric-power-transmission-lines)? Power substations? 
+      	* Did you find [Transmission Lines](https://hifld-geoplatform.opendata.arcgis.com/datasets/electric-power-transmission-lines)? Power substations? 
 
 * Download the data as in ***File Geodatabase*** format (to explore this format vs shapefile).
 * Explore the data in ArcGIS Pro.
@@ -111,22 +112,44 @@ We'll now grab some datasets to view in ArcGIS Pro. We'll start with those menti
 
 ## ArcGIS Online Datasets
 
-More and more data are being stored in formats directly accessible by ArcGIS Pro (vs having to download and open). 
+*More and more data are being stored in formats directly accessible by ArcGIS Pro (vs having to download and open).* 
+
+#### ►Searching for data using the ArcGIS Online Portal
 
 * In ArcGIS Pro's Catalog Pane, select the Portal tab, then select the "All Portal" icon (the basic cloud icon:  :cloud: ). This allows you to search a vast collection of datasets. 
 * In the search box, enter `ev charging`.  Hover over the results for more info on each. 
   * Refine your search with more keywords: `ev charging NC` 
   * Refine your search for just feature layer data: `ev charging type:feature`
   * Drag results onto your map to view them.
+* You can also perform these searching within ArcGIS Online...
+
+#### ►Searching for data using ESRI's Living Atlas
+
+* Now switch to from "All Portal" to the cloud icon with a small green book - **ESRI's Living Atlas**. 
+  * Filter your results, setting the category to Utilities and then entering `transmission type:feature` in the search term.
+  * Find and add the "Electric Power Transmission Lines" to your map.
+* A fuller description of the Living Atlas is here: https://livingatlas.arcgis.com/en/ 
 
 
 
-#### Some useful techniques for finding online data...
+#### ►Some useful techniques for finding online data...
 
 * Open MJB&A's online tool: https://mjb-a.maps.arcgis.com/apps/webappviewer/index.html?id=06a73cb31d014f4f8270a6c74a576fc4
   * Note the URL: it has `arcgis.com` in the name. Hmm...
 * Open up your ArcGIS Online web site: https://nsoe.maps.arcgis.com
 * Search AGOL for the sites ID value: `06a73cb31d014f4f8270a6c74a576fc4`
-* You'll see the result is Luke's: ownerID =`lukehellgren1` 
-* Back in ArcGIS Pro, in your Portal search box, enter: `owner:lukehellgren1`
-* In the results, find and add `ILIT_v3_exit_data_2019_10_24` to your map.
+  * You may have to toggle the button to search outside the NSOE portal..
+  * You'll see the result is  a Web Mapping Application owned by `lukehellgren1` !
+  * Let's see what else Luke has...
+* Back in ArcGIS Pro, in your Portal search box, enter: `NC owner:lukehellgren1 type:feature`
+  * Add some the results to your map and explore them...
+
+
+
+* Search ArcGIS Portal for `gas station NC`
+  * Add the one owned by *nconemap* to your map (add `owner:nconemap` to your search if you fail to find it.
+* Open up the Layers properties (right click it in the Map's table of contents and select Properties)...
+* Select the `Source` tab on the left. On the right, you'll see a URL...
+* Open this [URL](https://services.nconemap.gov/secure/rest/services/NC1Map_Energy/MapServer) in your browser...
+* At the top of the web site (called an ESRI REST endpoint) you'll find the path leading to this service. Click the [services](https://services.nconemap.gov/secure/rest/services) link...
+* This reveals many other services hosted by the same server; you might find other useful datasets there. 
