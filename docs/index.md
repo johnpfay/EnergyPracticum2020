@@ -22,7 +22,7 @@ Date: Spring 2020
 |  3   | Jan 23  | Discussion: Revisit question; devise actionable tasks<br />Tutorial: [Project based GIS](./Project-based-GIS.html) | [Initial project proposal](./Task03_InitialProjectProposal.html) |
 |  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html); <br />Workshop: Intro to [ArcGIS Online](https://nsoe.maps.arcgis.com/home/index.html); | [Read MJB&A documents](./Task04_MJBA_documents.html)         |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates ([recording](https://duke.zoom.us/rec/play/65YpfuippzM3T9fAtwSDCqR7W467Jqys13Id-_IOmkq3AHYCMVeiNOREMbNl3XPRh8Oy61y_bGZJu4sY?)) | Summarize MJB&A Talk; <br />Read [Project Scope Summary](./Project_Scope_Summary.html); <br />Attempt [Dive into Python](./Dive-into-Python.html) |
-|  6   | Feb 13  | Quick discussion: MJB&A recap<br />[Data Exploration in ArcGIS Pro]() | Gather and organize data                                     |
+|  6   | Feb 13  | Quick discussion: MJB&A recap<br />[Data Exploration in ArcGIS Pro](./DataExploration.html) | Gather and organize data                                     |
 |  7   | Feb 20  | Workshop: [Dive into Python](./Dive-into-Python.html); [Learning GIS](./Learning_GIS.html)<br />Workshop: Geometric objects and the Shapely package | Python exercises                                             |
 |  8   | Feb 27  | Workshop: Managing spatial data with GeoPandas               | Python exercises                                             |
 |  9   |  Mar 5  | Workshop: Spatial analyses with GeoPandas                    | Network analysis exercise                                    |
