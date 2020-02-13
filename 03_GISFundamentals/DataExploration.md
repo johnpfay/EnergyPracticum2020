@@ -153,3 +153,32 @@ We'll now grab some datasets to view in ArcGIS Pro. We'll start with those menti
 * Open this [URL](https://services.nconemap.gov/secure/rest/services/NC1Map_Energy/MapServer) in your browser...
 * At the top of the web site (called an ESRI REST endpoint) you'll find the path leading to this service. Click the [services](https://services.nconemap.gov/secure/rest/services) link...
 * This reveals many other services hosted by the same server; you might find other useful datasets there. 
+
+
+
+---
+
+
+
+## Assignment: 
+
+#### 1.Explore and add some datasets to your map that may be useful. 
+
+You are welcome to use the sites below or find your own.
+
+* US DOT: https://data-usdot.opendata.arcgis.com/
+* NC DOT: https://ncdot.maps.arcgis.com/home/index.html
+* NC OneMap: https://www.nconemap.gov/
+
+
+
+#### 2. Outline some analyses that might help in siting potential EV charging sites.
+
+Let the data we downloaded inspire you and just jot down what you might want to calculate. For example:
+
+* Find the distance between `X` and `Y`
+* Find the number of `X` that fall within `Y` km of `Z`
+
+
+
+![Tesla Flood](./media/TeslaFlood.jpg)
