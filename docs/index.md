@@ -33,6 +33,7 @@ Date: Spring 2020
 |  14  |  Apr 9  | Presentations                                                |                                                              |
 
 * [Data Links](./DataLinks.html) from your project contemplation assignments
+* Video links: [Feb 13](https://nsoe.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=325e9ba9-0451-4dde-99db-ab60014b0f82)
 
 ### ArcGIS Online Exercise
 
