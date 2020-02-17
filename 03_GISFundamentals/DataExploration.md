@@ -10,7 +10,7 @@ Data: Spring 2020
 
 In this exercise we'll introduce ourselves to ArcGIS Pro - the industry standard GIS application - and use it to explore various spatial datasets that might be useful in our analysis. In addition to a quick tour of the ArcGIS Pro (or "ArcPro") software, we'll cover topics such as creating a proper workspace structure for GIS analyses, the various types and formats of spatial data, and tips for finding, acquiring, and managing spatial datasets. 
 
-→ For this exercise, we'll use NSOE lab machines with our class drives mapped. (Recall the [login.bat](./login.bat) script we created...) 
+→ For this exercise, we'll use NSOE lab machines with our class drives mapped. (Recall the <A HREF="./login_790.bat" download>login_790.bat</A> script we created...) 
 
 I realize we'll be packing in a lot, so don't worry if some key points don't lodge in your head the first time hearing them. My intentions are to record this lesson so that you can go back to the class recording and review anything you want. 
 
@@ -70,7 +70,7 @@ We are now ready to start adding and viewing data.
 
 We'll now grab some datasets to view in ArcGIS Pro. We'll start with those mentioned by Luke Hellgren from MJB&A. 
 
-* Open up the [MJB&A slide deck](./media/MJB&A EV Location Tools [Nicholas School Presentation] 2020-02-06.pdf) and navigate to slide 6. 
+* Open up the [MJB&A slide deck](./Materials/MJB&A EV Location Tools [Nicholas School Presentation] 2020-02-06.pdf) and navigate to slide 6. 
 * Click on the link for [Federal Highway Administration (FHWA)Highway Performance Monitoring System](https://www.fhwa.dot.gov/policyinformation/hpms/shapefiles.cfm).
   * In the download page, select `2017` and `North Carolina`. Save the resulting zip file to your `data` folder created above.
   * Unzip the file. *it's contents are a **Shapefile**, which is a single GIS **feature class** stored across multiple files.* 
