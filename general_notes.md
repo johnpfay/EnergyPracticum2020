@@ -1,3 +1,5 @@
+
+
 ## Project ideas
 
 * Identify gaps in traversing the state along interstates
@@ -20,7 +22,6 @@
     * Betweenness = importance as stepping stone
   * Same analysis with Exits? Candidate sites added?
 
-
 ---
 
 | Date       | Topic                                | Tasks                                                      |
@@ -35,3 +36,64 @@
 | [No class] |                                      | Presentations                                              |
 | Apr 9      | Presentations                        | Presentations                                              |
 
+---
+
+### Data
+
+- [ ] DCFC locations
+  - [ ] NREL
+- [ ] Candidate locations
+  - [ ] Exits (MJB&A)
+  - [ ] Gas stations
+  - [ ] Vacant parcels
+- [ ] Road network
+  - [ ] NC DOT|NCOneMap
+- [ ] Power
+  - [ ] HIFLD - Transmission lines
+  - [ ] HIFLD - Power substations
+- [ ] Amenities
+  - [ ] Open Street Map features
+  - [ ] ESRI Enrichment
+  - [ ] Dunn & Bradtsreet
+
+### Analyses
+
+- [ ] Identify candidate site locations
+  - [ ] Exits 
+  - [ ] Gas stations
+  - [ ] Parcels
+- [ ] **Fill current gaps in connectivity**
+  - [ ] *Select* <u>roads segments</u> within 100, 200, 300 mi of existing <u>DCFC locations</u>; *invert* selection;
+    *Identify* all <u>candidate sites</u> that would bridge these gaps
+  - [ ] 
+- [ ] **Compute distance to power**
+  - [ ] *Compute distances* between each <u>candidate site</u> and the nearest <u>transmission line</u> | <u>power substation</u>
+- [ ] 
+
+### Tasks
+
+* [ ] Search and explore data
+  * [x] ArcGIS Online
+  * [x] ArcGIS Pro
+  * [ ] Open street map
+* [ ] Fetch data
+  * [ ] ArcGIS Portal | Living Atlas | ArcGIS REST Endpoints
+    * [x] Service types; Getting into ArcMap
+    * [ ] Export to local file
+  * [ ] APIs
+    * [ ] Fetch NREL data via API
+    * [ ] Fetch AGOL data via ArcGIS Python API
+* [ ] Create network dataset: ArcPro
+  * [ ] Create feature dataset
+  * [ ] Add NCRouteArcs:Interstates * NCRouteArcs:USroutes to feature dataset
+  * [ ] Create Network Dataset
+  * [ ] Build Network Dataset
+
+---
+
+#### OSM + GeoPandas
+
+* Load NC major roads (shapefile) into a GeoPandas geodataframe
+* Buffer freeways 
+* Use OSMNX to retrieve freeways
+* 
