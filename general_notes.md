@@ -42,10 +42,14 @@
 
 - [ ] DCFC locations
   - [ ] NREL
+    * `FetchingData\NREL-data.ipynb`→ `NREL_DFCsites.csv`
 - [ ] Candidate locations
   - [ ] Exits (MJB&A)
+    * `Fetching-ArcGIS-Online-Services.ipynb` → `MJBA_exits.shp`
   - [ ] Gas stations
+    * `Fetching-ArcGIS-Online-Services.ipynb` → `GasStations.shp`
   - [ ] Vacant parcels
+    * `Fetching-ArcGIS-Online-Services.ipynb` → `CensusParcels.shp`
 - [ ] Road network
   - [ ] NC DOT|NCOneMap
 - [ ] Power
@@ -93,6 +97,8 @@
 
 #### OSM + GeoPandas
 
+* Download roads from NC DOT
+* Subset NC major roads (interstates and major roads to new shapefile
 * Load NC major roads (shapefile) into a GeoPandas geodataframe
 * Buffer freeways 
 * Use OSMNX to retrieve freeways
