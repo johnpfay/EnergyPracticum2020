@@ -23,12 +23,12 @@ Date: Spring 2020
 |  4   | Jan 30  | Discussion: [Sharing project ideas](./Proposal-discussion.html); <br />Workshop: Intro to [ArcGIS Online](https://nsoe.maps.arcgis.com/home/index.html); | [Read MJB&A documents](./Task04_MJBA_documents.html)         |
 |  5   |  Feb 6  | Guest: MJ Bradley & Associates ([recording](https://duke.zoom.us/rec/play/65YpfuippzM3T9fAtwSDCqR7W467Jqys13Id-_IOmkq3AHYCMVeiNOREMbNl3XPRh8Oy61y_bGZJu4sY?)) | Summarize MJB&A Talk; <br />Read [Project Scope Summary](./Project_Scope_Summary.html); <br />Attempt [Dive into Python](./Dive-into-Python.html) |
 |  6   | Feb 13  | Quick discussion: MJB&A recap<br />[Data Exploration in ArcGIS Pro](./DataExploration.html) | Gather and organize data                                     |
-|  7   | Feb 20  | Workshop: [Dive into Python](./Dive-into-Python.html); [Learning GIS](./Learning_GIS.html)<br />Workshop: Geometric objects and the Shapely package | Python exercises                                             |
-|  8   | Feb 27  | Workshop: Managing spatial data with GeoPandas               | Python exercises                                             |
-|  9   |  Mar 5  | Workshop: Spatial analyses with GeoPandas                    | Network analysis exercise                                    |
-| *10* | *Mar 7* | *No Class - Spring break*                                    | Outline project goals                                        |
-|  11  | Mar 19  | Workshop: Network analyses                                   | Python exercises                                             |
-|  12  | Mar 26  | Project updates                                              | Project work                                                 |
+|  7   | Feb 20  | Intro to Python and Jupyter Notebooks<br />[Dive into Python](./Dive-into-Python.html); [Learning GIS](./Learning_GIS.html) | [Learning Pandas](./Learning_Pandas.html)                    |
+|  8   | Feb 27  | Fetching Spatial Data with Python                            | Complete Fetching Data notebooks                             |
+|  9   |  Mar 5  | Spatial data structures in Python: Shapely and Geopandas     | TBA                                                          |
+| *10* | *Mar 7* | *No Class - Spring break*                                    | TBA                                                          |
+|  11  | Mar 19  | Spatial analysis in Python                                   | TBA                                                          |
+|  12  | Mar 26  | Network analysis in Python                                   | Project work                                                 |
 | *13* | *Apr 2* | *No Class - MP Symposium*                                    | Project work                                                 |
 |  14  |  Apr 9  | Presentations                                                |                                                              |
 
