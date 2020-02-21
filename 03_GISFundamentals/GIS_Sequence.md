@@ -52,9 +52,9 @@
 * #### More AGOL Examples & Exercises: Gas Stations and Transmission Lines
 
   * Fetching Gas Station data from an AGOL service URL: https://services.nconemap.gov/secure/rest/services
-    Upload: `02b-Fetching-Data-From-AGOL-Service-URL`
+    Upload: `02b-Fetching-Data-From-AGOL-Service-URL.ipynb`
   * Fetching Transmission lines from HIFLD OpenData sites: https://hifld-geoplatform.opendata.arcgis.com/
-    Upload: `02c-Fetching-Data-From-OpenData-Sites`
+    Upload: `02c-Fetching-Data-From-OpenData-Sites.ipynb`
   * EXERCISES: 
     * Fetch HIFLD Power Station data
 
