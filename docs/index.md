@@ -24,7 +24,7 @@ Date: Spring 2020
 |  6   | Feb 13  | Quick discussion: MJB&A recap<br />[Data Exploration in ArcGIS Pro](./DataExploration.html) | Gather and organize data                                     |
 |  7   | Feb 20  | Intro to Python and Jupyter Notebooks<br />[Dive into Python](./Dive-into-Python.html) | [Learning Pandas](./Learning_Pandas.html)                    |
 |  8   | Feb 27  | [Fetching Spatial Data with Python](./FetchingData.html)     | [Learning Geopandas](./Learning_Geopandas.html)              |
-|  9   |  Mar 5  | Spatial data structures in Python: Shapely and Geopandas     | TBA                                                          |
+|  9   |  Mar 5  | Spatial Analysis with GeoPandas                              | TBA                                                          |
 | *10* | *Mar 7* | *No Class - Spring break*                                    | TBA                                                          |
 |  11  | Mar 19  | Spatial analysis in Python                                   | TBA                                                          |
 |  12  | Mar 26  | Network analysis in Python                                   | Project work                                                 |
