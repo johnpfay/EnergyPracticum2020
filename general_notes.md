@@ -52,6 +52,7 @@
     * `Fetching-ArcGIS-Online-Services.ipynb` → `CensusParcels.shp`
 - [ ] Road network
   - [ ] NC DOT|NCOneMap
+    * Download from site
 - [ ] Power
   - [ ] HIFLD - Transmission lines
   - [ ] HIFLD - Power substations
