@@ -49,5 +49,6 @@ As before, you will see a set of lessons for learning Geopandas as well as some 
 
 After completing these lessons, you should have some level of comfort doing the following:
 
-* Reading a shapefile into a GeoPandas dataframe. 
-* 
+* Reading and writing spatial data from/to common file formats 
+* Managing spatial data using Geopandas 
+* Re-projecting a geodatafame from one projection to another

@@ -308,6 +308,25 @@ a {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+    margin-bottom: 0px;
+	padding: 0px;
+},
+h4 {
+    margin-bottom: 0px;
+	padding: 0px;
+},
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
 
 h1:hover a.anchor,
 h2:hover a.anchor,
@@ -367,14 +386,13 @@ h2 {
 
 h3 {
     font-size: 1.4rem;
-    margin: 15px 0 15px;
-	padding: 0;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+	padding-bottom: 0px;
 }
 
 h4 {
     font-size: 1.2rem;
-    margin: 0;
-	padding: 0;
 }
 
 h5 {
@@ -548,7 +566,7 @@ table tr td:last-child {
     background-color: #F8F8F8 !important;
     border-radius: 2px;
     font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
-    font-size: 1.0rem;
+    font-size: 0.85rem;
     word-wrap: normal;
 }
 
@@ -734,6 +752,6 @@ footer {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><p><a href='./index.html'><span>ENV 790 - GIS Practicum (Energy)</span></a></p><h1><a name="learning-geopandas" class="md-header-anchor"></a><span>Learning GeoPandas</span></h1><p><span>Last week we used tutorials from </span><a href='https://geo-python.github.io/site/index.html'><span>Geo-Python</span></a><span> site to learn a bit about Pandas. Here, we use tutorial from its companion site, </span><a href='https://automating-gis-processes.github.io/site/index.html'><span>Auto-GIS</span></a><span>, to learn GeoPandas. Follow the steps below to gain access to the materials. </span></p><h3><a name="1-navigate-to-httpsautomating-gis-processesgithubiositelessonsl2overviewhtml" class="md-header-anchor"></a><span>1. Navigate to </span><a href='https://automating-gis-processes.github.io/site/lessons/L2/overview.html' target='_blank' class='url'>https://automating-gis-processes.github.io/site/lessons/L2/overview.html</a></h3><p><span>As before, you will see a set of lessons for learning Geopandas as well as some lesson videos. </span></p><p>&nbsp;</p><h3><a name="2-get-the-notebooks-and-data-for-the-exercise" class="md-header-anchor"></a><span>2. Get the notebooks and data for the exercise</span></h3><ul><li><p><span>Navigate to your ENVIRON859 environment (</span><a href='https://vm-manage.oit.duke.edu/containers/environ859' target='_blank' class='url'>https://vm-manage.oit.duke.edu/containers/environ859</a><span>) and log in. </span></p></li><li><p><span>Open up a new terminal window by clicking</span><code>New|▼</code><span> and selecting terminal. </span></p></li><li><p><span>In the terminal window type the following command:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">git clone https://github.com/DataDevils/PythonGIS.git</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 17px;"></div><div class="CodeMirror-gutters" style="display: none; height: 17px;"></div></div></div></pre><blockquote><p><span>This will download the full set of Auto-GIS lessons, found in a folder named &quot;PythonGIS&quot;. The GeoPandas exercises are in the </span><code>PythonGIS\L2</code><span> folder. </span></p></blockquote></li></ul><p>&nbsp;</p><h3><a name="3-run-through-the-geopandas-exercises-and-come-to-class-with-any-questions" class="md-header-anchor"></a><span>3. Run through the Geopandas exercises and come to class with any questions.</span></h3><ul><li><p><span>First, run the two code cells in the </span><code>Fetch-Unzip-Data.ipynb</code><span> notebook in the </span><code>PythonGIS/L2</code><span> folder. This downloads and unzips the data required for the exercises. When finished, close and halt the notebook (no saves needed).</span></p></li><li><p><span>Next run through the </span><code>1_geopandas-basics.ipynb</code><span> notebook. Recall that the &quot;answers&quot; to what needs to be filled in are available on the main Auto-GIS web site: </span><a href='https://automating-gis-processes.github.io/site/notebooks/L2/geopandas-basics.html' target='_blank' class='url'>https://automating-gis-processes.github.io/site/notebooks/L2/geopandas-basics.html</a><span>. Also, the videos include demonstrations of these workbooks in action. </span></p><blockquote><p><span>NOTE: The </span><code>`1_geopandas-basics.ipynb</code><span> notebook has a section on downloading the data. You already did that with the </span><code>Fetch-Unzip-Data.ipynb</code><span> notebook and can ingore this. </span></p></blockquote></li><li><p><span>Work through all the notebooks. Make a note of concepts you don&#39;t understand or could use additional clarification on. </span></p></li></ul><p>&nbsp;</p><h2><a name="key-proficiencies" class="md-header-anchor"></a><span>Key proficiencies</span></h2><p><span>After completing these lessons, you should have some level of comfort doing the following:</span></p><ul><li><span>Reading a shapefile into a GeoPandas dataframe. </span></li><li></li></ul></div>
+<div  id='write'  class = 'is-node'><p><a href='./index.html'><span>ENV 790 - GIS Practicum (Energy)</span></a></p><h1><a name="learning-geopandas" class="md-header-anchor"></a><span>Learning GeoPandas</span></h1><p><span>Last week we used tutorials from </span><a href='https://geo-python.github.io/site/index.html'><span>Geo-Python</span></a><span> site to learn a bit about Pandas. Here, we use tutorial from its companion site, </span><a href='https://automating-gis-processes.github.io/site/index.html'><span>Auto-GIS</span></a><span>, to learn GeoPandas. Follow the steps below to gain access to the materials. </span></p><h3><a name="1-navigate-to-httpsautomating-gis-processesgithubiositelessonsl2overviewhtml" class="md-header-anchor"></a><span>1. Navigate to </span><a href='https://automating-gis-processes.github.io/site/lessons/L2/overview.html' target='_blank' class='url'>https://automating-gis-processes.github.io/site/lessons/L2/overview.html</a></h3><p><span>As before, you will see a set of lessons for learning Geopandas as well as some lesson videos. </span></p><p>&nbsp;</p><h3><a name="2-get-the-notebooks-and-data-for-the-exercise" class="md-header-anchor"></a><span>2. Get the notebooks and data for the exercise</span></h3><ul><li><p><span>Navigate to your ENVIRON859 environment (</span><a href='https://vm-manage.oit.duke.edu/containers/environ859' target='_blank' class='url'>https://vm-manage.oit.duke.edu/containers/environ859</a><span>) and log in. </span></p></li><li><p><span>Open up a new terminal window by clicking</span><code>New|▼</code><span> and selecting terminal. </span></p></li><li><p><span>In the terminal window type the following command:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">git clone https://github.com/DataDevils/PythonGIS.git</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 17px;"></div><div class="CodeMirror-gutters" style="display: none; height: 17px;"></div></div></div></pre><blockquote><p><span>This will download the full set of Auto-GIS lessons, found in a folder named &quot;PythonGIS&quot;. The GeoPandas exercises are in the </span><code>PythonGIS\L2</code><span> folder. </span></p></blockquote></li></ul><p>&nbsp;</p><h3><a name="3-run-through-the-geopandas-exercises-and-come-to-class-with-any-questions" class="md-header-anchor"></a><span>3. Run through the Geopandas exercises and come to class with any questions.</span></h3><ul><li><p><span>First, run the two code cells in the </span><code>Fetch-Unzip-Data.ipynb</code><span> notebook in the </span><code>PythonGIS/L2</code><span> folder. This downloads and unzips the data required for the exercises. When finished, close and halt the notebook (no saves needed).</span></p></li><li><p><span>Next run through the </span><code>1_geopandas-basics.ipynb</code><span> notebook. Recall that the &quot;answers&quot; to what needs to be filled in are available on the main Auto-GIS web site: </span><a href='https://automating-gis-processes.github.io/site/notebooks/L2/geopandas-basics.html' target='_blank' class='url'>https://automating-gis-processes.github.io/site/notebooks/L2/geopandas-basics.html</a><span>. Also, the videos include demonstrations of these workbooks in action. </span></p><blockquote><p><span>NOTE: The </span><code>`1_geopandas-basics.ipynb</code><span> notebook has a section on downloading the data. You already did that with the </span><code>Fetch-Unzip-Data.ipynb</code><span> notebook and can ingore this. </span></p></blockquote></li><li><p><span>Work through all the notebooks. Make a note of concepts you don&#39;t understand or could use additional clarification on. </span></p></li></ul><p>&nbsp;</p><h2><a name="key-proficiencies" class="md-header-anchor"></a><span>Key proficiencies</span></h2><p><span>After completing these lessons, you should have some level of comfort doing the following:</span></p><ul><li><span>Reading and writing spatial data from/to common file formats </span></li><li><span>Managing spatial data using Geopandas </span></li><li><span>Re-projecting a geodatafame from one projection to another</span></li></ul></div>
 </body>
 </html>
