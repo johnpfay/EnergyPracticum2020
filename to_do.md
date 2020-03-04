@@ -67,3 +67,13 @@
   - [ ] Exercise 2 - Convert spreadsheet of exits to geodataframe, project, save to shapefile
 - [ ] Lesson 3 - Spatial Queries
   - [ ] Exercise 3 - 
+
+---
+
+## Exercise list
+
+- Extract a list of candidate sites [Exits from MJB&A]
+- Compute the distance from each exit to the nearest DCFC
+- Compute a list of amenities within a set distance of each exit
+- 
+
