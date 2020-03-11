@@ -32,7 +32,7 @@ Date: Spring 2020
 |  14  |  Apr 9  | Presentations                                                |                                                              |
 
 * [Data Links](./DataLinks.html) from your project contemplation assignments
-* Video links: [Feb 13](https://nsoe.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=325e9ba9-0451-4dde-99db-ab60014b0f82) | [Feb 20](https://nsoe.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=af396ee4-fa5a-474a-91de-ab67014afa5b)
+* Video links: [Feb 13](https://nsoe.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=325e9ba9-0451-4dde-99db-ab60014b0f82) | [Feb 20](https://nsoe.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=af396ee4-fa5a-474a-91de-ab67014afa5b) | [March 5](https://nsoe.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=e3b504ca-2cdd-4c7f-adf4-ab75014b27fd) | 
 
 ### ArcGIS Online Exercise
 
