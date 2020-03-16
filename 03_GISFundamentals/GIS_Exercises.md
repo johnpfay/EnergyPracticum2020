@@ -1,3 +1,9 @@
+---
+Title: GIS exercies
+Author: John Fay
+Date: Spring 2020
+---
+
 # GIS Exercises
 
 ### 1. Shapely and geometric objects (points, lines and polygons)
