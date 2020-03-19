@@ -30,7 +30,62 @@ Date: 16 March 2020
 * Fetch flood plain locations via AGOL
 * Fetch NC major roads network data via OSMNX package
 
+### Visualizing Data
+
+* Make maps of exits
+
 ### Tidying data
 
 * Convert 
+
+---
+
+### Analyses
+
+##### 1. Eliminate candidate sites that are in high-risk areas for flooding
+
+> First, let's identify which candidates sites (exits) fall within flood areas. To do this, we need data on flood risk areas and then we need to identify where each exit site falls within these areas. 
+>
+> ESRI provides flood risk data via its Living Atlas: 
+> https://www.arcgis.com/home/item.html?id=2b245b7f816044d7a779a61a5844be23 (Feature layer)
+> https://www.arcgis.com/home/item.html?id=11955f1b47ec41a3af86650824e0c634 (Imagery layer)
+>
+> We'll need to familiarize ourselves with the data in these datasets...
+
+<u>Workflow to identify candidate sites in flood-prone areas</u>:
+
+* 
+
+
+
+##### 2. Eliminate candidate sites (exits) that are already served by a DCFC
+
+> We first want to eliminate locations that are redundant with existing charging infrastructure. To simplify matters, we'll just use Euclidean distance for now (driving distance later). Redundant sites are those found within 1/2 the range of a typical passenger electric vehicle (PEV). We will assume a typical PEV to have a range of 100 miles. 
+>
+> *Why is a redundant site considered within half the range and not the full range? That's because we are worried about range anxiety. A car with a range of 100 miles can drive anywhere up to 50 miles from where it charged and return back to that charger. But if it ventures 51 miles, it might get stuck. With that, we are targeting new sites to be beyond that radius, but within the full radius so it can make it to the new charger.*  
+
+<u>Workflow to identify distance to nearest DCFC from each exit feature; Eliminate all exits > 50 and < 100 miles of a DCFC</u>
+
+* Import Exit features into your coding environment
+* Import DCFC features into your coding environment
+* Transform data to a common projected CRS, if needed
+* Compute distance between each exit and nearest DCFC
+* Select exits > 50 miles and < 100 miles from a DCFC into a new geodataframe
+* Save the geodataframe to a new shapefile
+
+
+
+##### 2. Compute # of amenities found within 1 mile of each remaining exit
+
+> Now that we have reduced the number of candidate sites, we'll move to identifying the amenities found nearby each exit. This will be our first step in developing the table of exit attributes that we'll use to identify which exits are best candidates for the next DCFC charger. 
+>
+> For amenity data, we'll use OSM data and the `osmnx` package. Recall that the `osmnx` package allows us to search "pois" (places of interest) within a polygon we provide and storing the results in a geodataframe. To generate this polygon, we'll buffer our exits and then merge these buffer into a single shape, using that shape to search for pois, saving these results into a new shapefile.
+
+<u>Workflow to identify and remove exits with no amenities nearby</u>
+
+* Import the features identified in step 1 into your coding environment.
+* Examine the coordinate reference system
+* Buffer features a set distance (2 miles?)
+* Merge buffered geometries into a single feature
+* Use that feature in the `osmnx` package to query for places of interest. 
 
