@@ -9,9 +9,11 @@ Date: Spring 2020
     <center> 
     ENV 790.55 - GIS Practicum (Energy) | 
     Spring 2020 | 
-    Instructor:     <a href='mailto:john.fay@duke.edu'>John Fay</a>
+    Instructor:     <a href='mailto:john.fay@duke.edu'>John Fay</a><br>
+    <A HREF='https://vm-manage.oit.duke.edu/containers'>Link to Virtual Containers</A>
     </center>
 </h4>
+
 ---
 
 | Week |   Date   | Topic                                                        | Assignment                                                   |
