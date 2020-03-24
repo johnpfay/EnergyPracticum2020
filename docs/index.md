@@ -10,7 +10,7 @@ Date: Spring 2020
     ENV 790.55 - GIS Practicum (Energy) | 
     Spring 2020 | 
     Instructor:     <a href='mailto:john.fay@duke.edu'>John Fay</a><br>
-    <A HREF='https://vm-manage.oit.duke.edu/containers'>Link to Virtual Containers</A>
+    <A HREF='https://vm-manage.oit.duke.edu/containers' target="_blank">Link to Virtual Containers</A>
     </center>
 </h4>
 
@@ -28,8 +28,8 @@ Date: Spring 2020
 |  8   |  Feb 27  | [Fetching Spatial Data with Python](./FetchingData.html)     | [Learning Geopandas](./Learning_Geopandas.html)              |
 |  9   |  Mar 5   | Spatial Analysis with GeoPandas ([Key Points](./Geopandas_KeyPoints.html)) | [Learning Geopandas](./Learning_Geopandas.html)              |
 |  10  | *Mar 7*  | *No Class - Spring break*                                    |                                                              |
-|  11  | *Mar 19* | *No Class -  Camp Corona*                                    | Read "[Moving Forward](./Moving-Forward.html)"               |
-|  12  |  Mar 26  | Clone [EV_Charger](https://github.com/DataDevils/EV_Network) workspace to your virtual environment<br>Examine and run the notebooks in the Notebooks folder |                                                              |
+|  11  | *Mar 19* | *No Class -  Camp Corona*                                    | Read "[Moving Forward](./Moving-Forward.html)"<br>Clone [EV_Charger](https://github.com/DataDevils/EV_Network) workspace to your virtual environment |
+|  12  |  Mar 26  | **Watch videos: Q & A during class period**<br />• [Project Set-up: Create workspace]()<br />• [Download data sets (Exits, DCFC, Substations)]()<br />• [Analysis: Eliminate exits prone to flooding]() |                                                              |
 |  13  | *Apr 2*  | *No Class - MEM presentations*                               |                                                              |
 |  14  |  Apr 9   |                                                              |                                                              |
 |  15  |  Apr 16  |                                                              |                                                              |
