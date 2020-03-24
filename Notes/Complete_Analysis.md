@@ -6,6 +6,7 @@ Date: 16 March 2020
 
 ## Analytical workflow
 
+* Create your workspace
 * Obtaining & Exploring data
 * Tidying data
 * Analyzing data
@@ -30,52 +31,52 @@ Date: 16 March 2020
 * Fetch flood plain locations via AGOL
 * Fetch NC major roads network data via OSMNX package
 
-### Visualizing Data
-
-* Make maps of exits
-
-### Tidying data
-
-* Convert 
-
 ---
 
 ### Analyses
 
-##### 1. Eliminate candidate sites that are in high-risk areas for flooding
+#### 1. Eliminate candidate sites that are in high-risk areas for flooding
 
 > First, let's identify which candidates sites (exits) fall within flood areas. To do this, we need data on flood risk areas and then we need to identify where each exit site falls within these areas. 
 >
 > ESRI provides flood risk data via its Living Atlas: 
-> https://www.arcgis.com/home/item.html?id=2b245b7f816044d7a779a61a5844be23 (Feature layer)
-> https://www.arcgis.com/home/item.html?id=11955f1b47ec41a3af86650824e0c634 (Imagery layer)
+> https://www.arcgis.com/home/item.html?id=11955f1b47ec41a3af86650824e0c634 
 >
-> We'll need to familiarize ourselves with the data in these datasets...
+> As this dataset resides on ArcGIS Online, we'll focus on using the [ArcGIS API for Python](https://developers.arcgis.com/python/guide/) for analysis. 
+>
+> Anyway, the workflow is outlined below. 
 
 <u>Workflow to identify candidate sites in flood-prone areas</u>:
 
-* 
+* Access the ESRI USA Flood Risk data as an [Imagery Layer](https://developers.arcgis.com/python/api-reference/arcgis.raster.toc.html#imagerylayer) object. (More on [Imagery Layers](https://developers.arcgis.com/python/guide/using-imagery-layers/)...)
+* Import our Exit features into our coding environment as a [spatially enabled dataframe](https://developers.arcgis.com/python/guide/introduction-to-the-spatially-enabled-dataframe/) (vs geodataframe).
+* Use the `identify()` function of the Imagery Layer object to extract pixel values at each Exit point location.
+* Use the `attribute_table()` function of the Imagery layer object to generate a list to cross reference values to actual flooding classes.
+* Add a new field to the Exits attribute table, assigning its value to the flood class corresponding to the point's location.
+* Save the resulting table as a CSV file and/or a Shapefile for later analysis.
 
 
 
-##### 2. Eliminate candidate sites (exits) that are already served by a DCFC
+#### 2. Eliminate candidate sites (exits) that are already served by a DCFC
 
-> We first want to eliminate locations that are redundant with existing charging infrastructure. To simplify matters, we'll just use Euclidean distance for now (driving distance later). Redundant sites are those found within 1/2 the range of a typical passenger electric vehicle (PEV). We will assume a typical PEV to have a range of 100 miles. 
+> Here we want to eliminate locations that are redundant with existing charging infrastructure. To simplify matters, we'll just use Euclidean distance for now (driving distance later). Redundant sites are those found within 1/2 the range of a typical passenger electric vehicle (PEV). We will assume a typical PEV to have a range of 100 miles. 
 >
-> *Why is a redundant site considered within half the range and not the full range? That's because we are worried about range anxiety. A car with a range of 100 miles can drive anywhere up to 50 miles from where it charged and return back to that charger. But if it ventures 51 miles, it might get stuck. With that, we are targeting new sites to be beyond that radius, but within the full radius so it can make it to the new charger.*  
+> > *Why is a redundant site considered within half the range and not the full range? That's because we are worried about range anxiety. A car with a range of 100 miles can drive anywhere up to 50 miles from where it charged and return back to that charger. But if it ventures 51 miles, it might get stuck. With that, we are targeting new sites to be beyond that radius, but within the full radius so it can make it to the new charger.*  
 
 <u>Workflow to identify distance to nearest DCFC from each exit feature; Eliminate all exits > 50 and < 100 miles of a DCFC</u>
 
-* Import Exit features into your coding environment
+* Import Exit features into your coding environment as a geodataframe
+  * Optionally, filter for records that aren't likely to flood.
 * Import DCFC features into your coding environment
-* Transform data to a common projected CRS, if needed
+  * Convert from CSV to a geo
+* Transform data to a common projected CRS, if needed, ensuring it's a projected CRS so distance units are not in degrees.
 * Compute distance between each exit and nearest DCFC
 * Select exits > 50 miles and < 100 miles from a DCFC into a new geodataframe
 * Save the geodataframe to a new shapefile
 
 
 
-##### 2. Compute # of amenities found within 1 mile of each remaining exit
+#### 3. Compute # of amenities found within 1 mile of each remaining exit
 
 > Now that we have reduced the number of candidate sites, we'll move to identifying the amenities found nearby each exit. This will be our first step in developing the table of exit attributes that we'll use to identify which exits are best candidates for the next DCFC charger. 
 >
@@ -83,9 +84,13 @@ Date: 16 March 2020
 
 <u>Workflow to identify and remove exits with no amenities nearby</u>
 
-* Import the features identified in step 1 into your coding environment.
-* Examine the coordinate reference system
-* Buffer features a set distance (2 miles?)
+* Import the Exit features - ones with flood zone and distance to nearest DCFC in its attribute table - into your coding environment. (Reducing the # of exits in our resulting dataset will speed analysis tremendously.)
+* Subset the features that occur outside of flood risk areas.
+* Further subset the features that fall between 50 and 100 miles from the nearest DCFC
+* Examine the coordinate reference system, ensure that its a projected coordinate system, not geographic
+* Buffer the exit features a set distance (2 miles?)
 * Merge buffered geometries into a single feature
-* Use that feature in the `osmnx` package to query for places of interest. 
+* Use that feature in the `osmnx` package to query for places of interest (restaurants, cafes, ?)
+* Compute a density surface of amenities
+* For each exit, compute its value within this density surface and add this value to the exit's attribute table
 
