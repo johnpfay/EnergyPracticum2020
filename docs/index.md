@@ -13,7 +13,6 @@ Date: Spring 2020
     <A HREF='https://vm-manage.oit.duke.edu/containers' target="_blank">Link to Virtual Containers</A>
     </center>
 </h4>
-
 ---
 
 | Week |   Date   | Topic                                                        | Assignment                                                   |
@@ -28,7 +27,7 @@ Date: Spring 2020
 |  8   |  Feb 27  | [Fetching Spatial Data with Python](./FetchingData.html)     | [Learning Geopandas](./Learning_Geopandas.html)              |
 |  9   |  Mar 5   | Spatial Analysis with GeoPandas ([Key Points](./Geopandas_KeyPoints.html)) | [Learning Geopandas](./Learning_Geopandas.html)              |
 |  10  | *Mar 7*  | *No Class - Spring break*                                    |                                                              |
-|  11  | *Mar 19* | *No Class -  Camp Corona*                                    | Read "[Moving Forward](./Moving-Forward.html)"<br>Clone [EV_Charger](https://github.com/DataDevils/EV_Network) workspace to your virtual environment |
+|  11  | *Mar 19* | *No Class -  Camp Corona*                                    | Read "[Moving Forward](./Moving-Forward.html)"<br>Clone [EV_Charger](https://github.com/DataDevils/EV_Network) to your virtual environment<br />→ [Video]([https://duke.zoom.us/rec/share/3ZVFFe7bzlJOb53T1nvYXpAiJa27X6a80ylIqaYFxEck2JA9bS8KU3EkwF3-DO7U](https://urldefense.com/v3/__https:/duke.zoom.us/rec/share/3ZVFFe7bzlJOb53T1nvYXpAiJa27X6a80ylIqaYFxEck2JA9bS8KU3EkwF3-DO7U__;!!OToaGQ!80QHw2oroDm13iTepQgcn2idLg-xiOM5yeeUw3JjG1iXtxNzvRptmerbKU43O8E$)) |
 |  12  |  Mar 26  | **Watch videos: Q & A during class period**<br />• [Project Set-up: Create workspace]()<br />• [Download data sets (Exits, DCFC, Substations)]()<br />• [Analysis: Eliminate exits prone to flooding]() |                                                              |
 |  13  | *Apr 2*  | *No Class - MEM presentations*                               |                                                              |
 |  14  |  Apr 9   |                                                              |                                                              |
