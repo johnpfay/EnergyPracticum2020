@@ -76,7 +76,21 @@ Date: 16 March 2020
 
 
 
-#### 3. Compute # of amenities found within 1 mile of each remaining exit
+#### 3. Calculate the distance from each candidate site to the nearest substation
+
+> We have eliminated some exits from our list of candidate sites (those prone to flooding and those too near or too far from existing DCFC infrastructure). For the remaining sites we want to compute how far each is from the nearest power substation. We have downloaded the substation locations from HILFD, and the remaining analysis is quite similar to what we did above.
+
+<u>Workflow to identify distance to nearest power substation</u>:
+
+* Import the subset of exit features into your coding environment
+* Import the HIFLD power substation data into your environment
+* Transform to a common projected CRS, if needed. Ensure it's a projected CRS. 
+* Compute the distance between each exit and the nearest substation
+* Export the result, now with distance to nearest substation, to a new shapefile.
+
+####  
+
+#### 4. Compute # of amenities found within 1 mile of each remaining exit
 
 > Now that we have reduced the number of candidate sites, we'll move to identifying the amenities found nearby each exit. This will be our first step in developing the table of exit attributes that we'll use to identify which exits are best candidates for the next DCFC charger. 
 >
