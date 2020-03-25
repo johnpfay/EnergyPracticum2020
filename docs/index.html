@@ -187,14 +187,14 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 /* latin-ext */
 /* latin */
 html {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 body {
     font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
     color: #34495e;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.2rem;
+    line-height: 1.6rem;
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
@@ -212,12 +212,12 @@ body {
 }
 
 #write ol li {
-    text-indent: 0.5rem;
+    text-indent: 0.0rem;
 }
 
 #write > ul:first-child,
 #write > ol:first-child {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 body > *:first-child {
@@ -229,25 +229,12 @@ body > *:last-child {
 }
 
 a {
-    color: #42b983;
+    color: Blue;
     font-weight: 600;
-    padding: 0 2px;
+    padding: 0px;
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
 
 h1:hover a.anchor,
 h2:hover a.anchor,
@@ -301,20 +288,20 @@ h1 {
 
 h2 {
     font-size: 1.75rem;
-    #line-height: 1.225;
-    margin: 35px 0 15px;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #ddd;
+    margin: 15px 0 15px;
+    border-bottom: 0px solid #ddd;
 }
 
 h3 {
     font-size: 1.4rem;
-    line-height: 1.43;
-    margin: 20px 0 7px;
+    margin: 15px 0 15px;
+	padding: 0;
 }
 
 h4 {
     font-size: 1.2rem;
+    margin: 0;
+	padding: 0;
 }
 
 h5 {
@@ -488,7 +475,7 @@ table tr td:last-child {
     background-color: #F8F8F8 !important;
     border-radius: 2px;
     font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
-    font-size: 0.85rem;
+    font-size: 1.0rem;
     word-wrap: normal;
 }
 
@@ -605,8 +592,18 @@ table tr td:last-child {
 }
 
 .md-toc {
-    margin-top: 2px;
-    padding-bottom: 2px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+.md-toc-h1 {
+  display: none;
+}
+.md-toc-h4 {
+  display: none;
+}
+.md-toc-h5 {
+  display: none;
 }
 
 .sidebar-tabs {
