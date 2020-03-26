@@ -11,8 +11,10 @@ Date: Spring 2020
     Spring 2020 | 
     Instructor:     <a href='mailto:john.fay@duke.edu'>John Fay</a><br>
     <A HREF='https://vm-manage.oit.duke.edu/containers' target="_blank">Link to Virtual Containers</A>
+    <A HREF='https://duke.zoom.us/j/103231206' target="_blank">Start ZOOM session</A> (Th 3:05-4:20)
     </center>
 </h4>
+
 ---
 
 | Week |   Date   | Topic                                                        | Assignment                                                   |
