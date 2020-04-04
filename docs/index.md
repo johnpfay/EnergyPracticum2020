@@ -14,7 +14,6 @@ Date: Spring 2020
     <A HREF='https://duke.zoom.us/j/103231206' target="_blank">Start ZOOM session</A> (Th 3:05-4:20)
     </center>
 </h4>
-
 ---
 
 | Week |   Date   | Topic                                                        | Assignment                                                   |
@@ -31,7 +30,7 @@ Date: Spring 2020
 |  10  | *Mar 7*  | *No Class - Spring break*                                    |                                                              |
 |  11  | *Mar 19* | *No Class -  Camp Corona*                                    | Read "[Moving Forward](./Moving-Forward.html)"<br>Clone [EV_Charger](https://github.com/DataDevils/EV_Network) to your virtual environment<br />→ [Video](https://duke.zoom.us/rec/play/upx5c-mv_zM3HdPA5gSDUP9wW9Tvev6sgCAZ86FeyEm1WiEGZgD1Z7YWYOKznpQutIEhJ9Vp01cPcOYH?autoplay=true&startTime=1585060621000) |
 |  12  |  Mar 26  | **Watch videos: Q & A during class period**<br />• [Project Set-up: Create workspace](https://duke.zoom.us/rec/play/vccuJun8_283H9zDtwSDC6coW9W1JqKshyFPr_sInkvhBiQCZwClY-QWZOr7G95-977wkV39fGBLezaf)<br />• [Fetch data sets (Exits, DCFC, Substations](https://duke.zoom.us/rec/play/75csd7v8pjw3S9aVtQSDAqd-W9TpLP2sh3Ub-vIMyEzhVyQCZgWkb-BHYuFQUWjfARxVmNdisxM_xIT1))<br />• Analysis: Eliminate exits prone to flooding ([1](https://duke.zoom.us/rec/share/tdwvfqP59mJJWKP39BnmA6h7J6jUX6a813QYqKdbnU4JJ0Cqu0pMXqunNkWCwqee) [2](https://duke.zoom.us/rec/share/6fBsCazQ-3pITa_G4hrQYaUYIpm-aaa81yZIqPdfmUuQsxnctjS7eJE1qon9OJYx)) |                                                              |
-|  13  | *Apr 2*  | *No Class - MEM presentations*                               |                                                              |
+|  13  | *Apr 2*  | *No Class - MEM presentations*                               | Watch Distance to DCFC ( [1](https://duke.zoom.us/rec/play/7sclI-mtpm83GNGXtwSDBfR5W9Xuev6sgSQXqPAOyU2zVnZXZwauNOZBY7eAdcT1yezNnSFyX1RfCTBM?autoplay=true&startTime=1586005386000) \| [2](https://duke.zoom.us/rec/share/3uEtCLi3z11OXYWKz0zBHfMvDJzHT6a8gSIarvQNifcdo4lLKZW2a7rxg6xEZw?startTime=1586005797000) \| [3](https://duke.zoom.us/rec/share/yMtWD7v8019IR6_KyV38XJAZBZTGT6a8gCEe-KcKzk18XDCWmHiKy0O8YflCF6-B?startTime=1586007101000)) |
 |  14  |  Apr 9   |                                                              |                                                              |
 |  15  |  Apr 16  |                                                              |                                                              |
 
