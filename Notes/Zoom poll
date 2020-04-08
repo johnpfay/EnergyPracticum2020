@@ -1,0 +1,88 @@
+
+
+1. Have you been able to successfully clone the EV_Networks git repository to your ENVIRON859 virtual environment? ( Single Choice)
+
+Answer 1: Yes
+
+Answer 2: No
+
+2. Have you created your own project workspace in the ENVIRON859 workspace? (This is a folder with the "data", "scripts", and "scratch" sub-folders, and a short "ReadMe.txt" file.) ( Single Choice)
+
+Answer 1: Yes
+
+Answer 2: No
+
+3. Indicate which datasets you've been able to download ( Multiple Choice)
+
+Answer 1: MJBA Exits Shapefile
+
+Answer 2: NREL DC Fast Charger CSV
+
+Answer 3: HIFLD Substation Shapefile
+
+4. In downloading the data, how would you describe your understanding of the code used to fetch the data? ( Multiple Choice)
+
+Answer 1: Unable to download data
+
+Answer 2: Able to download, but only via scripts provided. Don't know how they worked.
+
+Answer 3: Able to download, but only via scripts provided. But I get how they work.
+
+Answer 4: Able to download, using my own scripts, and I get this!
+
+5. Rate your understanding of how to download data via their ESRI Rest Endpoint (e.g. MJBA exits). ( Single Choice)
+
+Answer 1: 1 - What's an "ESRI Rest Endpoint"?
+
+Answer 2: 2 - I understand an ESRI Rest Endpoint and Shapefiles, but now how this goes from on to the other.
+
+Answer 3: 3 - I can follow the logic here, but what are these "FeatureLayer" and "SDF" thingies?
+
+Answer 4: 4 - I'm able to link what's going one here with the ArcGIS API documentation
+
+Answer 5: 5 - I feel I can download any feature layer from its ESRI REST URL.
+
+6. Regarding the code use to fetch the NREL Fast Charger locations, select the statements that are true. ( Multiple Choice)
+
+Answer 1: I understand the code well enough so that I could modify the API request and pull records that included more than just "open" charger locations or more than just "DC fast charging" locations.
+
+Answer 2: I feel I have at least a conceptual understanding of what a Pandas dataframe is and how to extract specific rows, columns or row/column combinations from a dataframe.
+
+Answer 3: I have enough understanding of Pandas dataframes so that I could extract all rows meeting a specific criteria from the df_DCFC dataframe.
+
+Answer 4: I have no clue how this code got me the data.
+
+7. Regarding the notebook used to extract flood zone values for each exit location, select the statements that are true. ( Multiple Choice)
+
+Answer 1: I was able to authenticate my "gis" object using by NSOE.maps.arcgis.com account.
+
+Answer 2: I understand why the "gis" object required authenticating.
+
+Answer 3: I was able access the flood layer dataset in my coding environment.
+
+Answer 4: I understand the "identify" function enough so that I could probably extract the flood hazard values for the HIFLD substation locations if I wanted.
+
+Answer 5: The ArcGIS Python API documentation is helpful and I could find out many of the properties and methods associated with imagery layers.
+
+Answer 6: This entire script makes perfect sense to me!
+
+8. Relating to the notebook used to calculate distances between DCFC and Exit locations, select the statements that are true. ( Multiple Choice)
+
+Answer 1: I'm comfortable importing shapefiles into my coding environment as Geopandas geodataframes.
+
+Answer 2: I'm comfortable importing CSV files that contain Lat/Lng data and converting them into Geopandas geodataframes.
+
+Answer 3: I understand how to discover the coordinate reference system (crs) that a geodataframe uses and how to change it to a different crs.
+
+Answer 4: I understand why it would be necessary to transform a geodataframe using a geographic crs to instead use a projected crs if I wanted to buffer its features 1 mile.
+
+Answer 5: I understand the difference between a geodataframe, a geoseries, and a geometry object.
+
+9. At present, are you leaning towards taking the class P/F or for a letter grade? ( Single Choice)
+
+Answer 1: P/F
+
+Answer 2: Letter grade
+
+
+Given that we have only one more class meeting, what's a realistic expectation for a final product in this class? 
