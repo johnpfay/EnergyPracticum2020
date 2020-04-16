@@ -6,7 +6,17 @@ Date: Spring 2020
 
 # Saving and submitting your EV workspace
 
-Here we cover three methods for saving and submitting your Jupyter notebooks. 
+Here we cover three methods for saving and submitting your Jupyter notebooks. Before we go into these options, however, let's quickly cover what should be included in each notebook:
+
+## Jupyter Notebook Guidlines
+
+* **Add "markdown" cells to your code, particularly at the top, to allow for formatted text briefly describing what the script does.**  This [LINK](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) provides an overview of how to add markdown elements to your text. You can also double-click on the markdown cells I provide in the notebooks I provide in the EV_Network workspace. 
+* **Include your name (or email) and a date in the header of your script.** 
+* **Include comments in each code cell to describe what the cell does.** Again, use the notebooks I provide for guidance.
+* **Strive for clear, understandable code**. Use logical variable names and remove unnecessary processes. Try to maintain a logical workflow. 
+* **Remove unnecessary code**. If it's not relevant to your overall objective in the script, remove the code. (This includes the "proof of concept" code cells I include in my demo notebooks!)
+
+---
 
 ## Option 1. Download to local machine
 
